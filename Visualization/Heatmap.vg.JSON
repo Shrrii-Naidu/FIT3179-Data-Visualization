@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 750,
+  "height": 300,
+  "background": "#ece0d1",
+  "title": {
+  "text": ["Reviewed coffees have shifted lighter:", "Medium-Light led 2016-2023, and Light is now rising"],
+  "subtitle": ["Share of each year's Coffee Review ratings by roast level.", "Blank = no reviews. 2000 omitted (roast not recorded); 2026 is a partial year."]
+},
+  "data": {
+    "url": "Data/reviews_trimmed.csv",
+    "format": { "type": "csv", "parse": { "review_year": "number" } }
+  },
+  "transform": [
+    { "filter": "isValid(datum.roast_level) && datum.roast_level !== '' && datum.roast_level !== 'NA' && isValid(datum.review_year)" },
+    { "aggregate": [{ "op": "count", "as": "n" }], "groupby": ["review_year", "roast_level"] },
+    { "joinaggregate": [{ "op": "sum", "field": "n", "as": "year_total" }], "groupby": ["review_year"] },
+    { "calculate": "datum.n / datum.year_total", "as": "share" }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": { "field": "review_year", "type": "ordinal",
+           "axis": { "title": null, "labelAngle": 0 } },
+    "y": { "field": "roast_level", "type": "ordinal",
+           "sort": ["Light", "Medium-Light", "Medium", "Medium-Dark", "Dark", "Very Dark"],
+           "axis": { "title": null } },
+    "color": { "field": "share", "type": "quantitative",
+           "scale": { "range": ["#fbf3e4", "#ecd2a3", "#d8975a", "#a4542a", "#4a2412"] },
+           "legend": { "title": "Share of year", "format": "%" } },
+    "tooltip": [
+      { "field": "review_year", "title": "Year" },
+      { "field": "roast_level", "title": "Roast" },
+      { "field": "n", "title": "Reviews" },
+      { "field": "share", "title": "Share", "format": ".0%" }
+    ]
+  },
+  "config": {
+    "font": "Montserrat",
+    "view": { "stroke": null },
+    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
+               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
+    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
+              "titleFont": "Montserrat", "titleColor": "#6f4e37",
+              "domainColor": "#38220f", "tickColor": "#38220f" },
+    "legend": { "labelFont": "Montserrat", "titleFont": "Montserrat",
+                "labelColor": "#38220f", "titleColor": "#6f4e37" }
+  }
+}

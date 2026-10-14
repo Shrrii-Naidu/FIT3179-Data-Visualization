@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Brazil grows more coffee than Vietnam and Colombia combined",
+    "subtitle": "Top 10 coffee-producing countries, 2024",
+    "anchor": "start"
+  },
+  "width": 560,
+  "height": 320,
+  "background": "#ece0d1",
+"config": {
+  "font": "Montserrat",
+  "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
+             "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
+  "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
+            "titleFont": "Montserrat", "titleColor": "#6f4e37",
+            "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4",
+            "labelLimit": 220 }
+},
+  "data": {
+    "url": "Data/fao_production.csv",
+    "format": { "type": "csv", "parse": { "year": "number", "tonnes": "number", "m49": "number" } }
+  },
+  "transform": [
+    { "filter": "datum.year == 2024 && isValid(datum.tonnes)" },
+    { "window": [{ "op": "rank", "as": "rank" }],
+      "sort": [{ "field": "tonnes", "order": "descending" }] },
+    { "filter": "datum.rank <= 10" }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "bar" },
+      "encoding": {
+        "y": { "field": "country", "type": "nominal",  "title": null, "sort": ["Brazil", "Vietnam", "Colombia", "Indonesia", "Ethiopia", "Uganda", "India", "Peru", "Central African Republic", "Honduras"] },
+        "x": { "field": "tonnes", "type": "quantitative",
+               "title": "Production (tonnes)", "axis": { "format": "~s" } },
+        "color": {
+          "condition": [
+            { "test": "datum.country === 'Brazil'", "value": "#6f4e37" },
+            { "test": "datum.country === 'Vietnam' || datum.country === 'Colombia'", "value": "#b08968" }
+          ],
+          "value": "#d6c3ab"
+        },
+        "tooltip": [
+          { "field": "country", "title": "Country" },
+          { "field": "tonnes", "title": "Tonnes", "format": "," },
+          { "field": "flag", "title": "Data flag" }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.country === 'India'" }],
+      "mark": { "type": "text", "align": "left", "baseline": "middle",
+                "lineBreak": "\n", "fontSize": 12, "color": "#38220f" },
+      "encoding": {
+        "y": { "field": "country", "type": "nominal", "title": null, "sort": ["Brazil", "Vietnam", "Colombia", "Indonesia", "Ethiopia", "Uganda", "India", "Peru", "Central African Republic", "Honduras"] },
+        "x": { "datum": 1200000, "type": "quantitative" }
+      }
+    }
+  ]
+}
