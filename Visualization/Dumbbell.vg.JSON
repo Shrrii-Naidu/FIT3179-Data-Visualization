@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 380,
+  "background": "#ece0d1",
+  "title": {
+  "text": "Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews",
+  "subtitle": "Share of world production (FAO, 2024) vs share of single-origin reviews (Coffee Review), top 12 countries"
+},
+  "data": {
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/gap.csv",
+    "format": { "type": "csv", "parse": { "production": "number", "reviews": "number", "gap": "number" } }
+  },
+  "layer": [
+    {
+      "mark": { "type": "rule", "strokeWidth": 3, "color": "#b08968" },
+      "encoding": {
+        "y": { "field": "country", "type": "nominal",
+               "sort": { "field": "gap", "op": "max", "order": "ascending" },
+               "axis": { "title": null } },
+        "x": { "field": "production", "type": "quantitative",
+               "axis": { "title": "Share of total", "format": "%" } },
+        "x2": { "field": "reviews" }
+      }
+    },
+    {
+      "transform": [{ "fold": ["production", "reviews"], "as": ["measure", "share"] }],
+      "mark": { "type": "point", "filled": true, "size": 160, "opacity": 1 },
+      "encoding": {
+        "y": { "field": "country", "type": "nominal",
+               "sort": { "field": "gap", "op": "max", "order": "ascending" },
+               "axis": { "title": null } },
+        "x": { "field": "share", "type": "quantitative", "axis": { "format": "%" } },
+        "color": { "field": "measure", "type": "nominal",
+                   "scale": { "domain": ["production", "reviews"], "range": ["#6f4e37", "#e08a2e"] },
+                   "legend": { "title": null, "orient": "top",
+                               "labelExpr": "datum.label === 'production' ? 'Share of world production' : 'Share of reviews'" } },
+        "tooltip": [
+          { "field": "country", "title": "Country" },
+          { "field": "measure", "title": "Measure" },
+          { "field": "share", "title": "Share", "format": ".1%" }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "Montserrat",
+    "view": { "stroke": null },
+    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
+               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
+    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
+              "titleFont": "Montserrat", "titleColor": "#6f4e37",
+              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" },
+    "legend": { "labelFont": "Montserrat", "labelColor": "#38220f" }
+  }
+}

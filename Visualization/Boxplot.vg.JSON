@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 650,
+  "height": 380,
+  "background": "#ece0d1",
+  "title": {
+  "text": "Origin moves a coffee's rating by only a few points",
+  "subtitle": "Coffee Review ratings by origin (single-origin coffees, countries with 100+ reviews). Axis starts at 60."
+},
+  "data": {
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
+    "format": { "type": "csv", "parse": { "rating": "number" } }
+  },
+  "transform": [
+    { "filter": "datum.origin_type === 'single' && isValid(datum.rating) && isValid(datum.country)" },
+    { "joinaggregate": [{ "op": "count", "as": "n_reviews" }], "groupby": ["country"] },
+    { "filter": "datum.n_reviews >= 100" }
+  ],
+  "mark": { "type": "boxplot", "extent": 1.5, "size": 18, "color": "#b08968",
+            "median": { "color": "#38220f" } },
+  "encoding": {
+      "y": { "field": "country", "type": "nominal",
+           "sort": ["Panama", "United States of America", "Colombia", "Costa Rica", "Ethiopia", "Kenya", "El Salvador", "Guatemala", "Honduras", "Indonesia", "Nicaragua", "Peru", "Rwanda", "Brazil", "Mexico"],
+           "axis": { "title": null } },
+    "x": { "field": "rating", "type": "quantitative",
+           "scale": { "zero": false },
+           "axis": { "title": "Rating (out of 100)" } }
+  },
+  "config": {
+    "font": "Montserrat",
+    "view": { "stroke": null },
+    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
+               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
+    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
+              "titleFont": "Montserrat", "titleColor": "#6f4e37",
+              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" }
+  }
+}
