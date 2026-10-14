@@ -1,0 +1,906 @@
+country,m49,year,tonnes,flag
+Angola,24,2014,15009,A
+Angola,24,2015,15000,A
+Angola,24,2016,14679.61,I
+Angola,24,2017,13542.99,I
+Angola,24,2018,13228.18,I
+Angola,24,2019,13256.51,I
+Angola,24,2020,11652.14,I
+Angola,24,2021,10304,A
+Angola,24,2022,5206,A
+Angola,24,2023,6229,A
+Angola,24,2024,7584,A
+Belize,84,2014,87.54,I
+Belize,84,2015,91.22,I
+Belize,84,2016,89.13,I
+Belize,84,2017,89.3,E
+Belize,84,2018,89.88,E
+Belize,84,2019,89.44,E
+Belize,84,2020,89.54,E
+Belize,84,2021,89.62,E
+Belize,84,2022,89.53,E
+Belize,84,2023,89.56,E
+Belize,84,2024,89.57,E
+Benin,204,2014,57.3,I
+Benin,204,2015,48.76,I
+Benin,204,2016,58.69,E
+Benin,204,2017,54.91,E
+Benin,204,2018,54.12,E
+Benin,204,2019,55.91,E
+Benin,204,2020,54.98,E
+Benin,204,2021,55,E
+Benin,204,2022,55.3,E
+Benin,204,2023,55.09,E
+Benin,204,2024,55.13,E
+Bolivia (Plurinational State of),68,2014,20496,A
+Bolivia (Plurinational State of),68,2015,20954,A
+Bolivia (Plurinational State of),68,2016,21427,A
+Bolivia (Plurinational State of),68,2017,21181,A
+Bolivia (Plurinational State of),68,2018,22120.99,A
+Bolivia (Plurinational State of),68,2019,24841,A
+Bolivia (Plurinational State of),68,2020,23401,A
+Bolivia (Plurinational State of),68,2021,23451.98,A
+Bolivia (Plurinational State of),68,2022,23238.78,A
+Bolivia (Plurinational State of),68,2023,23579.45,A
+Bolivia (Plurinational State of),68,2024,23063.65,A
+Brazil,76,2014,2804070,A
+Brazil,76,2015,2647504,A
+Brazil,76,2016,3024466,A
+Brazil,76,2017,2684508,A
+Brazil,76,2018,3552729,A
+Brazil,76,2019,3011745,A
+Brazil,76,2020,3705719,A
+Brazil,76,2021,2985581,A
+Brazil,76,2022,3179341,A
+Brazil,76,2023,3348510,A
+Brazil,76,2024,3387724,A
+Burundi,108,2014,10405,A
+Burundi,108,2015,18367,A
+Burundi,108,2016,13624.46,A
+Burundi,108,2017,16340,A
+Burundi,108,2018,14216,A
+Burundi,108,2019,14059,A
+Burundi,108,2020,7111,A
+Burundi,108,2021,13800,X
+Burundi,108,2022,10500,X
+Burundi,108,2023,8400,X
+Burundi,108,2024,6900,X
+Cabo Verde,132,2014,52,A
+Cabo Verde,132,2015,52.34,A
+Cabo Verde,132,2016,68.09,A
+Cabo Verde,132,2017,46.89,A
+Cabo Verde,132,2018,46,A
+Cabo Verde,132,2019,40,A
+Cabo Verde,132,2020,48,A
+Cabo Verde,132,2021,40.73,A
+Cabo Verde,132,2022,47,A
+Cabo Verde,132,2023,17.17,A
+Cabo Verde,132,2024,14,A
+Cambodia,116,2014,356.58,I
+Cambodia,116,2015,369.69,I
+Cambodia,116,2016,359.8,E
+Cambodia,116,2017,356.64,I
+Cambodia,116,2018,356.82,I
+Cambodia,116,2019,357.51,I
+Cambodia,116,2020,358.97,I
+Cambodia,116,2021,362.38,I
+Cambodia,116,2022,361.76,I
+Cambodia,116,2023,362.22,I
+Cambodia,116,2024,362.68,I
+Cameroon,120,2014,41143.17,I
+Cameroon,120,2015,39702.17,I
+Cameroon,120,2016,38411.7,A
+Cameroon,120,2017,41916.8,A
+Cameroon,120,2018,41184.5,A
+Cameroon,120,2019,40907.3,A
+Cameroon,120,2020,36359.9,A
+Cameroon,120,2021,32487.61,I
+Cameroon,120,2022,32255.27,I
+Cameroon,120,2023,31009.61,I
+Cameroon,120,2024,29774.37,I
+Central African Republic,140,2014,10799,A
+Central African Republic,140,2015,9050,A
+Central African Republic,140,2016,10120,A
+Central African Republic,140,2017,9989.67,E
+Central African Republic,140,2018,89979.42,I
+Central African Republic,140,2019,202752.73,I
+Central African Republic,140,2020,289283.3,A
+Central African Republic,140,2021,297961.8,A
+Central African Republic,140,2022,306900.66,A
+Central African Republic,140,2023,316108,A
+Central African Republic,140,2024,324922.99,I
+China,159,2014,127585.93,E
+China,159,2015,115896.76,E
+China,159,2016,114186.44,E
+China,159,2017,115110.14,E
+China,159,2018,116519,E
+China,159,2019,121012,E
+China,159,2020,114970,E
+China,159,2021,108906,E
+China,159,2022,108980,E
+China,159,2023,108956,E
+China,159,2024,114951.29,E
+"China, mainland",156,2014,127585.93,I
+"China, mainland",156,2015,115139.76,I
+"China, mainland",156,2016,113345.44,I
+"China, mainland",156,2017,114163.14,I
+"China, mainland",156,2018,115500,X
+"China, mainland",156,2019,120000,X
+"China, mainland",156,2020,114000,X
+"China, mainland",156,2021,108000,X
+"China, mainland",156,2022,108000,X
+"China, mainland",156,2023,108000,X
+"China, mainland",156,2024,114000,X
+"China, Taiwan Province of",158,2014,0,I
+"China, Taiwan Province of",158,2015,757,A
+"China, Taiwan Province of",158,2016,841,A
+"China, Taiwan Province of",158,2017,947,A
+"China, Taiwan Province of",158,2018,1019,A
+"China, Taiwan Province of",158,2019,1012,A
+"China, Taiwan Province of",158,2020,970,A
+"China, Taiwan Province of",158,2021,906,A
+"China, Taiwan Province of",158,2022,980,A
+"China, Taiwan Province of",158,2023,956,A
+"China, Taiwan Province of",158,2024,951.29,I
+Colombia,170,2014,728400,A
+Colombia,170,2015,827750,A
+Colombia,170,2016,818243,A
+Colombia,170,2017,851640,A
+Colombia,170,2018,813420,A
+Colombia,170,2019,885120,A
+Colombia,170,2020,833400,A
+Colombia,170,2021,560340,A
+Colombia,170,2022,665015.95,A
+Colombia,170,2023,680857.67,A
+Colombia,170,2024,839846.69,A
+Comoros,174,2014,133.48,I
+Comoros,174,2015,135.35,I
+Comoros,174,2016,136.26,I
+Comoros,174,2017,137.12,I
+Comoros,174,2018,138.18,I
+Comoros,174,2019,139.35,I
+Comoros,174,2020,140.59,I
+Comoros,174,2021,143.45,I
+Comoros,174,2022,141.13,E
+Comoros,174,2023,141.73,E
+Comoros,174,2024,142.1,E
+Congo,178,2014,3005.38,I
+Congo,178,2015,3038.73,I
+Congo,178,2016,3062.07,I
+Congo,178,2017,3108.09,I
+Congo,178,2018,3151.08,I
+Congo,178,2019,3173.44,I
+Congo,178,2020,3191.72,I
+Congo,178,2021,3172.08,E
+Congo,178,2022,3179.08,E
+Congo,178,2023,3180.96,E
+Congo,178,2024,3177.37,E
+Cook Islands,184,2014,0.3,I
+Cook Islands,184,2015,0.4,I
+Cook Islands,184,2016,0.34,E
+Cook Islands,184,2017,0.3,I
+Cook Islands,184,2018,0.27,I
+Cook Islands,184,2019,0.26,I
+Cook Islands,184,2020,0.25,I
+Cook Islands,184,2021,0.34,I
+Cook Islands,184,2022,0.36,I
+Cook Islands,184,2023,0.36,I
+Cook Islands,184,2024,0.37,I
+Costa Rica,188,2014,96735,A
+Costa Rica,188,2015,83846,A
+Costa Rica,188,2016,93720,A
+Costa Rica,188,2017,90419,A
+Costa Rica,188,2018,92016,A
+Costa Rica,188,2019,76385,A
+Costa Rica,188,2020,86791,A
+Costa Rica,188,2021,95322,A
+Costa Rica,188,2022,74620.26,A
+Costa Rica,188,2023,80270.33,A
+Costa Rica,188,2024,62153.98,A
+Côte d'Ivoire,384,2014,109913.47,I
+Côte d'Ivoire,384,2015,127000,A
+Côte d'Ivoire,384,2016,106000,A
+Côte d'Ivoire,384,2017,33600,A
+Côte d'Ivoire,384,2018,123900,A
+Côte d'Ivoire,384,2019,95204,A
+Côte d'Ivoire,384,2020,82366,A
+Côte d'Ivoire,384,2021,61312,A
+Côte d'Ivoire,384,2022,89878,A
+Côte d'Ivoire,384,2023,46975,A
+Côte d'Ivoire,384,2024,72133,A
+Cuba,192,2014,9203.03,I
+Cuba,192,2015,7416.54,I
+Cuba,192,2016,7539.75,I
+Cuba,192,2017,6780,X
+Cuba,192,2018,7680,X
+Cuba,192,2019,7800,X
+Cuba,192,2020,7500,X
+Cuba,192,2021,9100,A
+Cuba,192,2022,6252,A
+Cuba,192,2023,6000,X
+Cuba,192,2024,6000,X
+Democratic Republic of the Congo,180,2014,28233,I
+Democratic Republic of the Congo,180,2015,30999.41,I
+Democratic Republic of the Congo,180,2016,29644.37,E
+Democratic Republic of the Congo,180,2017,40342.18,I
+Democratic Republic of the Congo,180,2018,51485,A
+Democratic Republic of the Congo,180,2019,52940,A
+Democratic Republic of the Congo,180,2020,53303,A
+Democratic Republic of the Congo,180,2021,54159.65,I
+Democratic Republic of the Congo,180,2022,58817.48,I
+Democratic Republic of the Congo,180,2023,62405.41,I
+Democratic Republic of the Congo,180,2024,65701.24,I
+Dominica,212,2014,370.3,I
+Dominica,212,2015,370.1,I
+Dominica,212,2016,369.63,I
+Dominica,212,2017,369.36,I
+Dominica,212,2018,369.7,E
+Dominica,212,2019,353.64,I
+Dominica,212,2020,364.23,E
+Dominica,212,2021,362.53,E
+Dominica,212,2022,360.13,E
+Dominica,212,2023,362.3,E
+Dominica,212,2024,361.65,E
+Dominican Republic,214,2014,13213.28,A
+Dominican Republic,214,2015,9888.42,A
+Dominican Republic,214,2016,11470.58,A
+Dominican Republic,214,2017,15241,A
+Dominican Republic,214,2018,18416.04,A
+Dominican Republic,214,2019,13873.31,A
+Dominican Republic,214,2020,15380.93,A
+Dominican Republic,214,2021,16558.97,A
+Dominican Republic,214,2022,20577.02,A
+Dominican Republic,214,2023,27397.26,A
+Dominican Republic,214,2024,24838,A
+Ecuador,218,2014,4224.53,A
+Ecuador,218,2015,5297.44,A
+Ecuador,218,2016,3904.53,A
+Ecuador,218,2017,7564,A
+Ecuador,218,2018,5065,A
+Ecuador,218,2019,8140.98,A
+Ecuador,218,2020,5280.29,A
+Ecuador,218,2021,4916.87,A
+Ecuador,218,2022,7965.97,A
+Ecuador,218,2023,5584.19,A
+Ecuador,218,2024,5465.05,A
+El Salvador,222,2014,41965,A
+El Salvador,222,2015,35682,A
+El Salvador,222,2016,38636,A
+El Salvador,222,2017,41141.36,A
+El Salvador,222,2018,43318.8,A
+El Salvador,222,2019,33640.91,A
+El Salvador,222,2020,35000,A
+El Salvador,222,2021,41910.91,A
+El Salvador,222,2022,41866,A
+El Salvador,222,2023,32570.72,I
+El Salvador,222,2024,28487.64,I
+Equatorial Guinea,226,2014,4385.48,I
+Equatorial Guinea,226,2015,4254.38,I
+Equatorial Guinea,226,2016,4174.11,I
+Equatorial Guinea,226,2017,4134.3,I
+Equatorial Guinea,226,2018,4113.44,I
+Equatorial Guinea,226,2019,4094.87,I
+Equatorial Guinea,226,2020,4056.41,I
+Equatorial Guinea,226,2021,4062.25,I
+Equatorial Guinea,226,2022,4076.41,I
+Equatorial Guinea,226,2023,4055.45,I
+Equatorial Guinea,226,2024,4034.35,I
+Ethiopia,231,2014,467860,E
+Ethiopia,231,2015,501240,E
+Ethiopia,231,2016,494819,A
+Ethiopia,231,2017,549531,A
+Ethiopia,231,2018,573986,A
+Ethiopia,231,2019,573580,E
+Ethiopia,231,2020,584789.57,A
+Ethiopia,231,2021,590400,E
+Ethiopia,231,2022,545566.36,A
+Ethiopia,231,2023,559400,X
+Ethiopia,231,2024,575696.18,I
+Fiji,242,2014,21.14,I
+Fiji,242,2015,7.76,I
+Fiji,242,2016,16.3,E
+Fiji,242,2017,15.07,E
+Fiji,242,2018,13.04,E
+Fiji,242,2019,14.8,E
+Fiji,242,2020,14.3,E
+Fiji,242,2021,14.05,E
+Fiji,242,2022,14.38,E
+Fiji,242,2023,14.25,E
+Fiji,242,2024,14.23,E
+French Polynesia,258,2014,20,E
+French Polynesia,258,2015,20.88,I
+French Polynesia,258,2016,21.59,I
+French Polynesia,258,2017,20.82,E
+French Polynesia,258,2018,21.85,I
+French Polynesia,258,2019,22.42,I
+French Polynesia,258,2020,21.7,E
+French Polynesia,258,2021,21.99,E
+French Polynesia,258,2022,22.03,E
+French Polynesia,258,2023,21.91,E
+French Polynesia,258,2024,21.98,E
+Gabon,266,2014,109.37,I
+Gabon,266,2015,107.33,I
+Gabon,266,2016,104.51,I
+Gabon,266,2017,102.42,I
+Gabon,266,2018,104.75,E
+Gabon,266,2019,103.9,E
+Gabon,266,2020,103.69,E
+Gabon,266,2021,104.11,E
+Gabon,266,2022,103.9,E
+Gabon,266,2023,103.9,E
+Gabon,266,2024,103.97,E
+Ghana,288,2014,736,A
+Ghana,288,2015,736,A
+Ghana,288,2016,736,X
+Ghana,288,2017,736,E
+Ghana,288,2018,736,E
+Ghana,288,2019,736,E
+Ghana,288,2020,736,E
+Ghana,288,2021,736,E
+Ghana,288,2022,736,E
+Ghana,288,2023,736,E
+Ghana,288,2024,736,E
+Guatemala,320,2014,227653.47,A
+Guatemala,320,2015,225653.13,A
+Guatemala,320,2016,236144.72,A
+Guatemala,320,2017,224000,X
+Guatemala,320,2018,240400,X
+Guatemala,320,2019,216400,X
+Guatemala,320,2020,246000,X
+Guatemala,320,2021,226700,X
+Guatemala,320,2022,238354,A
+Guatemala,320,2023,212848,A
+Guatemala,320,2024,224860,A
+Guinea,324,2014,41500,A
+Guinea,324,2015,210866,A
+Guinea,324,2016,218635,A
+Guinea,324,2017,216691,A
+Guinea,324,2018,235043,A
+Guinea,324,2019,243703,A
+Guinea,324,2020,242682,A
+Guinea,324,2021,261992,A
+Guinea,324,2022,261645,A
+Guinea,324,2023,200000,X
+Guinea,324,2024,174847.18,I
+Guyana,328,2014,420,X
+Guyana,328,2015,420,X
+Guyana,328,2016,420,X
+Guyana,328,2017,420,X
+Guyana,328,2018,475,A
+Guyana,328,2019,654,A
+Guyana,328,2020,600,X
+Guyana,328,2021,600,X
+Guyana,328,2022,567,A
+Guyana,328,2023,133,A
+Guyana,328,2024,151,A
+Haiti,332,2014,3600,X
+Haiti,332,2015,3660,X
+Haiti,332,2016,3840,X
+Haiti,332,2017,3969,X
+Haiti,332,2018,4167,X
+Haiti,332,2019,4376,X
+Haiti,332,2020,4595,X
+Haiti,332,2021,4824,X
+Haiti,332,2022,5066,X
+Haiti,332,2023,5021.3,I
+Haiti,332,2024,4371.49,I
+Honduras,340,2014,282230,A
+Honduras,340,2015,332747,A
+Honduras,340,2016,366542,A
+Honduras,340,2017,477580,A
+Honduras,340,2018,478830.76,A
+Honduras,340,2019,472497.96,A
+Honduras,340,2020,364552.38,A
+Honduras,340,2021,417591.24,A
+Honduras,340,2022,330111.31,A
+Honduras,340,2023,384361.02,A
+Honduras,340,2024,324015.02,A
+India,356,2014,304500,A
+India,356,2015,327000,A
+India,356,2016,348000,A
+India,356,2017,312000,A
+India,356,2018,316000,A
+India,356,2019,319500,A
+India,356,2020,298000,A
+India,356,2021,334000,A
+India,356,2022,352000,A
+India,356,2023,360500,A
+India,356,2024,363000,A
+Indonesia,360,2014,643900,A
+Indonesia,360,2015,639412,A
+Indonesia,360,2016,639305,A
+Indonesia,360,2017,717962,A
+Indonesia,360,2018,756051,A
+Indonesia,360,2019,752512,A
+Indonesia,360,2020,762380,A
+Indonesia,360,2021,786191,A
+Indonesia,360,2022,774960.53,A
+Indonesia,360,2023,758725,A
+Indonesia,360,2024,807578,A
+Jamaica,388,2014,5298,A
+Jamaica,388,2015,5755,A
+Jamaica,388,2016,7580,A
+Jamaica,388,2017,6222,A
+Jamaica,388,2018,7085,A
+Jamaica,388,2019,6701,A
+Jamaica,388,2020,6201,A
+Jamaica,388,2021,6507.8,A
+Jamaica,388,2022,7064.1,A
+Jamaica,388,2023,8152,A
+Jamaica,388,2024,6521,A
+Kenya,404,2014,49500,A
+Kenya,404,2015,42000,A
+Kenya,404,2016,46100,A
+Kenya,404,2017,38620,A
+Kenya,404,2018,41375,A
+Kenya,404,2019,44500,A
+Kenya,404,2020,36900,A
+Kenya,404,2021,34500,A
+Kenya,404,2022,51900,A
+Kenya,404,2023,48700,A
+Kenya,404,2024,49500,A
+Lao People's Democratic Republic,418,2014,113580,A
+Lao People's Democratic Republic,418,2015,135925,A
+Lao People's Democratic Republic,418,2016,136600,A
+Lao People's Democratic Republic,418,2017,150795,A
+Lao People's Democratic Republic,418,2018,154435,A
+Lao People's Democratic Republic,418,2019,171380,A
+Lao People's Democratic Republic,418,2020,158190,A
+Lao People's Democratic Republic,418,2021,161200,A
+Lao People's Democratic Republic,418,2022,171000,A
+Lao People's Democratic Republic,418,2023,183895,A
+Lao People's Democratic Republic,418,2024,174900,A
+Liberia,430,2014,650.74,I
+Liberia,430,2015,628.42,I
+Liberia,430,2016,638.69,E
+Liberia,430,2017,625.6,I
+Liberia,430,2018,620.95,I
+Liberia,430,2019,628.41,E
+Liberia,430,2020,626.48,I
+Liberia,430,2021,656.18,I
+Liberia,430,2022,655.85,I
+Liberia,430,2023,654.58,I
+Liberia,430,2024,653.22,I
+Madagascar,450,2014,49223,A
+Madagascar,450,2015,47507,A
+Madagascar,450,2016,53093,A
+Madagascar,450,2017,59602,A
+Madagascar,450,2018,54514.81,I
+Madagascar,450,2019,65760,A
+Madagascar,450,2020,42220,A
+Madagascar,450,2021,46400.61,I
+Madagascar,450,2022,50532.03,I
+Madagascar,450,2023,49340.52,I
+Madagascar,450,2024,49561.4,I
+Malawi,454,2014,6757,A
+Malawi,454,2015,7217,A
+Malawi,454,2016,7217,A
+Malawi,454,2017,8420,A
+Malawi,454,2018,11082,A
+Malawi,454,2019,11000,X
+Malawi,454,2020,10000,X
+Malawi,454,2021,10086,A
+Malawi,454,2022,11000,X
+Malawi,454,2023,11000,X
+Malawi,454,2024,11223.46,I
+Malaysia,458,2014,8186,A
+Malaysia,458,2015,5929,A
+Malaysia,458,2016,7170,A
+Malaysia,458,2017,8109.18,A
+Malaysia,458,2018,3369.2,A
+Malaysia,458,2019,3558.5,A
+Malaysia,458,2020,4241.08,A
+Malaysia,458,2021,4150.55,A
+Malaysia,458,2022,3849.58,A
+Malaysia,458,2023,3910.09,A
+Malaysia,458,2024,2861.29,A
+Mauritius,480,2014,NA,M
+Mauritius,480,2015,NA,M
+Mauritius,480,2016,NA,M
+Mauritius,480,2017,NA,M
+Mauritius,480,2018,NA,M
+Mauritius,480,2019,NA,M
+Mauritius,480,2020,NA,M
+Mauritius,480,2021,NA,M
+Mauritius,480,2022,NA,M
+Mauritius,480,2023,NA,M
+Mauritius,480,2024,NA,M
+Mexico,484,2014,214667,A
+Mexico,484,2015,188934,A
+Mexico,484,2016,151714,A
+Mexico,484,2017,153777.4,A
+Mexico,484,2018,158307.99,A
+Mexico,484,2019,165712.27,A
+Mexico,484,2020,175554.62,A
+Mexico,484,2021,174341.4,A
+Mexico,484,2022,188710,E
+Mexico,484,2023,194940,E
+Mexico,484,2024,194470,E
+Mozambique,508,2014,816.94,I
+Mozambique,508,2015,804.44,I
+Mozambique,508,2016,840.46,E
+Mozambique,508,2017,806.23,I
+Mozambique,508,2018,798.24,I
+Mozambique,508,2019,789.95,I
+Mozambique,508,2020,791.95,I
+Mozambique,508,2021,797.11,I
+Mozambique,508,2022,802.61,I
+Mozambique,508,2023,803.15,I
+Mozambique,508,2024,803.7,I
+Myanmar,104,2014,8400,A
+Myanmar,104,2015,8300,A
+Myanmar,104,2016,8474,A
+Myanmar,104,2017,8547,A
+Myanmar,104,2018,8677.84,A
+Myanmar,104,2019,8769,A
+Myanmar,104,2020,8908,A
+Myanmar,104,2021,8908,A
+Myanmar,104,2022,8557,A
+Myanmar,104,2023,8481.74,I
+Myanmar,104,2024,8903.66,I
+Nepal,524,2014,430,A
+Nepal,524,2015,463.58,A
+Nepal,524,2016,532,A
+Nepal,524,2017,466,A
+Nepal,524,2018,513,A
+Nepal,524,2019,530,A
+Nepal,524,2020,297,A
+Nepal,524,2021,315,A
+Nepal,524,2022,355,A
+Nepal,524,2023,394.4,A
+Nepal,524,2024,501.3,A
+New Caledonia,540,2014,5,A
+New Caledonia,540,2015,6.39,A
+New Caledonia,540,2016,3.55,A
+New Caledonia,540,2017,5.2,A
+New Caledonia,540,2018,2.6,A
+New Caledonia,540,2019,2,A
+New Caledonia,540,2020,1.94,A
+New Caledonia,540,2021,1.92,A
+New Caledonia,540,2022,1.54,I
+New Caledonia,540,2023,1.18,I
+New Caledonia,540,2024,1.01,I
+Nicaragua,558,2014,86089.58,A
+Nicaragua,558,2015,95254.51,A
+Nicaragua,558,2016,122470.09,A
+Nicaragua,558,2017,128111.06,A
+Nicaragua,558,2018,141931,A
+Nicaragua,558,2019,156902,A
+Nicaragua,558,2020,154409.87,A
+Nicaragua,558,2021,165558.38,A
+Nicaragua,558,2022,170180.53,A
+Nicaragua,558,2023,143336.66,A
+Nigeria,566,2014,1972.17,I
+Nigeria,566,2015,1754.52,I
+Nigeria,566,2016,1942.23,E
+Nigeria,566,2017,1889.64,E
+Nigeria,566,2018,1862.13,E
+Nigeria,566,2019,1852.02,I
+Nigeria,566,2020,1806.08,I
+Nigeria,566,2021,1798.95,I
+Nigeria,566,2022,1819.02,E
+Nigeria,566,2023,1808.01,E
+Nigeria,566,2024,1808.66,E
+Panama,591,2014,6688,A
+Panama,591,2015,7464,A
+Panama,591,2016,6135,A
+Panama,591,2017,6588,A
+Panama,591,2018,5579,A
+Panama,591,2019,8371,A
+Panama,591,2020,6254,A
+Panama,591,2021,6020,A
+Panama,591,2022,6189.06,I
+Panama,591,2023,6445.13,I
+Panama,591,2024,6318.02,I
+Papua New Guinea,598,2014,56893.36,I
+Papua New Guinea,598,2015,57982.28,I
+Papua New Guinea,598,2016,53719.27,I
+Papua New Guinea,598,2017,46980,X
+Papua New Guinea,598,2018,53160,X
+Papua New Guinea,598,2019,45129,A
+Papua New Guinea,598,2020,40500,A
+Papua New Guinea,598,2021,47880,X
+Papua New Guinea,598,2022,40800,X
+Papua New Guinea,598,2023,58800,X
+Papua New Guinea,598,2024,50400,X
+Paraguay,600,2014,386,A
+Paraguay,600,2015,395,A
+Paraguay,600,2016,395,A
+Paraguay,600,2017,442,A
+Paraguay,600,2018,441,A
+Paraguay,600,2019,399,A
+Paraguay,600,2020,381,A
+Paraguay,600,2021,388,A
+Paraguay,600,2022,394.55,I
+Paraguay,600,2023,361.58,I
+Paraguay,600,2024,363.19,I
+Peru,604,2014,222047,A
+Peru,604,2015,251938,A
+Peru,604,2016,277760.4,A
+Peru,604,2017,337330,A
+Peru,604,2018,369621.99,A
+Peru,604,2019,363319.59,A
+Peru,604,2020,353205.74,A
+Peru,604,2021,363996.83,A
+Peru,604,2022,357346.42,A
+Peru,604,2023,366940.03,A
+Peru,604,2024,358993.78,A
+Philippines,608,2014,75454,A
+Philippines,608,2015,72342,A
+Philippines,608,2016,68822.93,A
+Philippines,608,2017,62077.95,A
+Philippines,608,2018,60312.76,A
+Philippines,608,2019,60043.88,A
+Philippines,608,2020,60640.95,A
+Philippines,608,2021,60607.18,A
+Philippines,608,2022,59962.36,I
+Philippines,608,2023,60000,E
+Philippines,608,2024,64000,E
+Puerto Rico,630,2014,4674.4,A
+Puerto Rico,630,2015,3369.05,A
+Puerto Rico,630,2016,3120.43,I
+Puerto Rico,630,2017,1800,E
+Puerto Rico,630,2018,975,A
+Puerto Rico,630,2019,1820.06,I
+Puerto Rico,630,2020,1950.76,I
+Puerto Rico,630,2021,1862.42,I
+Puerto Rico,630,2022,2740,A
+Puerto Rico,630,2023,1468.77,I
+Puerto Rico,630,2024,635.99,I
+Rwanda,646,2014,16379,A
+Rwanda,646,2015,21808,A
+Rwanda,646,2016,24689.41,I
+Rwanda,646,2017,31717.52,A
+Rwanda,646,2018,38643.34,A
+Rwanda,646,2019,29366.01,A
+Rwanda,646,2020,20459,A
+Rwanda,646,2021,19466.88,A
+Rwanda,646,2022,18945.39,A
+Rwanda,646,2023,27104.4,A
+Rwanda,646,2024,17839.78,A
+Saint Lucia,662,2014,NA,M
+Saint Lucia,662,2015,NA,M
+Saint Lucia,662,2016,NA,M
+Saint Lucia,662,2017,NA,M
+Saint Lucia,662,2018,NA,M
+Saint Lucia,662,2019,NA,M
+Saint Lucia,662,2020,NA,M
+Saint Lucia,662,2021,NA,M
+Saint Lucia,662,2022,NA,M
+Saint Lucia,662,2023,NA,M
+Saint Lucia,662,2024,NA,M
+Saint Vincent and the Grenadines,670,2014,177.28,I
+Saint Vincent and the Grenadines,670,2015,180.61,I
+Saint Vincent and the Grenadines,670,2016,184.4,I
+Saint Vincent and the Grenadines,670,2017,187.31,I
+Saint Vincent and the Grenadines,670,2018,189.22,I
+Saint Vincent and the Grenadines,670,2019,189.87,I
+Saint Vincent and the Grenadines,670,2020,190.52,I
+Saint Vincent and the Grenadines,670,2021,189.95,I
+Saint Vincent and the Grenadines,670,2022,189.55,I
+Saint Vincent and the Grenadines,670,2023,189.78,I
+Saint Vincent and the Grenadines,670,2024,189.99,I
+Samoa,882,2014,11.22,I
+Samoa,882,2015,11.13,I
+Samoa,882,2016,11.27,I
+Samoa,882,2017,11.43,I
+Samoa,882,2018,11.7,I
+Samoa,882,2019,11.96,I
+Samoa,882,2020,12.27,I
+Samoa,882,2021,11.79,E
+Samoa,882,2022,11.82,E
+Samoa,882,2023,11.77,E
+Samoa,882,2024,11.79,E
+Sao Tome and Principe,678,2014,8.03,I
+Sao Tome and Principe,678,2015,8.61,I
+Sao Tome and Principe,678,2016,6.84,E
+Sao Tome and Principe,678,2017,7.83,E
+Sao Tome and Principe,678,2018,7.62,I
+Sao Tome and Principe,678,2019,6.85,I
+Sao Tome and Principe,678,2020,7,I
+Sao Tome and Principe,678,2021,6.76,I
+Sao Tome and Principe,678,2022,7.19,E
+Sao Tome and Principe,678,2023,7.31,E
+Sao Tome and Principe,678,2024,7.27,E
+Saudi Arabia,682,2014,NA,M
+Saudi Arabia,682,2015,NA,M
+Saudi Arabia,682,2016,NA,M
+Saudi Arabia,682,2017,NA,M
+Saudi Arabia,682,2018,NA,M
+Saudi Arabia,682,2019,NA,M
+Saudi Arabia,682,2020,NA,M
+Saudi Arabia,682,2021,NA,M
+Saudi Arabia,682,2022,NA,M
+Saudi Arabia,682,2023,763.34,A
+Saudi Arabia,682,2024,760,E
+Sierra Leone,694,2014,2756,X
+Sierra Leone,694,2015,2756,X
+Sierra Leone,694,2016,2275,X
+Sierra Leone,694,2017,2277,X
+Sierra Leone,694,2018,2685,X
+Sierra Leone,694,2019,2400,X
+Sierra Leone,694,2020,2400,X
+Sierra Leone,694,2021,2400,X
+Sierra Leone,694,2022,2580,X
+Sierra Leone,694,2023,2333.16,A
+Sierra Leone,694,2024,2208.05,I
+Spain,724,2014,NA,M
+Spain,724,2015,NA,M
+Spain,724,2016,NA,M
+Spain,724,2017,NA,M
+Sri Lanka,144,2014,6089,A
+Sri Lanka,144,2015,5866.3,I
+Sri Lanka,144,2016,5593,A
+Sri Lanka,144,2017,5431,A
+Sri Lanka,144,2018,6445,A
+Sri Lanka,144,2019,4887,A
+Sri Lanka,144,2020,6724.6,A
+Sri Lanka,144,2021,5306.2,A
+Sri Lanka,144,2022,4828,A
+Sri Lanka,144,2023,4750,A
+Sri Lanka,144,2024,5117,A
+Suriname,740,2014,5.87,I
+Suriname,740,2015,6,I
+Suriname,740,2016,5.53,I
+Suriname,740,2017,5.8,E
+Suriname,740,2018,5.78,E
+Suriname,740,2019,5.44,I
+Suriname,740,2020,5.49,I
+Suriname,740,2021,6.14,I
+Suriname,740,2022,6.22,I
+Suriname,740,2023,6.22,I
+Suriname,740,2024,6.22,I
+Thailand,764,2014,37950,A
+Thailand,764,2015,26089,A
+Thailand,764,2016,30579,A
+Thailand,764,2017,25909,A
+Thailand,764,2018,23619,A
+Thailand,764,2019,26424.38,A
+Thailand,764,2020,22483,A
+Thailand,764,2021,21774.51,A
+Thailand,764,2022,18740,A
+Thailand,764,2023,16690,A
+Thailand,764,2024,16623.48,A
+Timor-Leste,626,2014,6660,X
+Timor-Leste,626,2015,3540,X
+Timor-Leste,626,2016,4920,X
+Timor-Leste,626,2017,3900,X
+Timor-Leste,626,2018,8340,X
+Timor-Leste,626,2019,6180,X
+Timor-Leste,626,2020,9088.23,I
+Timor-Leste,626,2021,13313.98,A
+Timor-Leste,626,2022,11571.53,I
+Timor-Leste,626,2023,9637.22,I
+Timor-Leste,626,2024,9522.52,I
+Togo,768,2014,15500,A
+Togo,768,2015,16093,A
+Togo,768,2016,17933,A
+Togo,768,2017,18476,A
+Togo,768,2018,19076,A
+Togo,768,2019,21316,A
+Togo,768,2020,22006,A
+Togo,768,2021,23106,A
+Togo,768,2022,25132,A
+Togo,768,2023,22619.45,I
+Togo,768,2024,21769.41,I
+Tonga,776,2014,14.86,I
+Tonga,776,2015,15.99,I
+Tonga,776,2016,15.28,E
+Tonga,776,2017,15.2,I
+Tonga,776,2018,15.22,I
+Tonga,776,2019,15.24,I
+Tonga,776,2020,15.32,I
+Tonga,776,2021,15.38,I
+Tonga,776,2022,15.24,I
+Tonga,776,2023,15.21,I
+Tonga,776,2024,15.18,I
+Trinidad and Tobago,780,2014,51.16,I
+Trinidad and Tobago,780,2015,30.79,I
+Trinidad and Tobago,780,2016,707,X
+Trinidad and Tobago,780,2017,707,X
+Trinidad and Tobago,780,2018,720,X
+Trinidad and Tobago,780,2019,800,X
+Trinidad and Tobago,780,2020,742.33,E
+Trinidad and Tobago,780,2021,754.11,E
+Trinidad and Tobago,780,2022,765.48,E
+Trinidad and Tobago,780,2023,753.98,E
+Trinidad and Tobago,780,2024,757.86,E
+Uganda,800,2014,220135,A
+Uganda,800,2015,229149,A
+Uganda,800,2016,243061,A
+Uganda,800,2017,302063,A
+Uganda,800,2018,284225,A
+Uganda,800,2019,313933,A
+Uganda,800,2020,360103,A
+Uganda,800,2021,414007,A
+Uganda,800,2022,507000,A
+Uganda,800,2023,468000,A
+Uganda,800,2024,402000,X
+United Republic of Tanzania,834,2014,48982,A
+United Republic of Tanzania,834,2015,42674,A
+United Republic of Tanzania,834,2016,60921,A
+United Republic of Tanzania,834,2017,47693,A
+United Republic of Tanzania,834,2018,45254,A
+United Republic of Tanzania,834,2019,68147,A
+United Republic of Tanzania,834,2020,60651,A
+United Republic of Tanzania,834,2021,73027,A
+United Republic of Tanzania,834,2022,66837,A
+United Republic of Tanzania,834,2023,62917,A
+United Republic of Tanzania,834,2024,77417,A
+United States of America,840,2014,3670,A
+United States of America,840,2015,2390,A
+United States of America,840,2016,1960,A
+United States of America,840,2017,2200,A
+United States of America,840,2018,2490,A
+United States of America,840,2019,2320,A
+United States of America,840,2020,1960,A
+United States of America,840,2021,4709,A
+United States of America,840,2022,3759,A
+United States of America,840,2023,3121,A
+United States of America,840,2024,3817,A
+Vanuatu,548,2014,15.3,I
+Vanuatu,548,2015,15.22,I
+Vanuatu,548,2016,15.13,I
+Vanuatu,548,2017,15.03,I
+Vanuatu,548,2018,14.93,I
+Vanuatu,548,2019,14.59,I
+Vanuatu,548,2020,14.37,I
+Vanuatu,548,2021,14.44,I
+Vanuatu,548,2022,15,A
+Vanuatu,548,2023,14.49,I
+Vanuatu,548,2024,13.43,I
+Venezuela (Bolivarian Republic of),862,2014,52683,A
+Venezuela (Bolivarian Republic of),862,2015,49987,A
+Venezuela (Bolivarian Republic of),862,2016,50947.58,A
+Venezuela (Bolivarian Republic of),862,2017,56630,A
+Venezuela (Bolivarian Republic of),862,2018,58188,A
+Venezuela (Bolivarian Republic of),862,2019,57015,A
+Venezuela (Bolivarian Republic of),862,2020,54242,A
+Venezuela (Bolivarian Republic of),862,2021,53723,A
+Venezuela (Bolivarian Republic of),862,2022,57177,A
+Venezuela (Bolivarian Republic of),862,2023,58625,A
+Venezuela (Bolivarian Republic of),862,2024,58268.29,I
+Vietnam,704,2014,1406469,A
+Vietnam,704,2015,1452999.3,A
+Vietnam,704,2016,1460800.01,A
+Vietnam,704,2017,1542397.88,A
+Vietnam,704,2018,1616307.25,A
+Vietnam,704,2019,1686765.17,A
+Vietnam,704,2020,1763476.04,A
+Vietnam,704,2021,1845032.98,A
+Vietnam,704,2022,1953990.16,A
+Vietnam,704,2023,1956782.46,A
+Vietnam,704,2024,2015289,A
+Yemen,887,2014,20059,A
+Yemen,887,2015,19257,A
+Yemen,887,2016,18945,A
+Yemen,887,2017,18767,A
+Yemen,887,2018,18642,A
+Yemen,887,2019,20812,A
+Yemen,887,2020,21443,X
+Yemen,887,2021,41933.49,X
+Yemen,887,2022,23945,X
+Yemen,887,2023,24640,X
+Yemen,887,2024,26544.19,I
+Zambia,894,2014,7564.41,I
+Zambia,894,2015,8051.05,I
+Zambia,894,2016,8732.02,I
+Zambia,894,2017,8760.77,I
+Zambia,894,2018,8514.61,E
+Zambia,894,2019,9003.91,I
+Zambia,894,2020,8759.76,E
+Zambia,894,2021,8759.43,E
+Zambia,894,2022,8841.03,E
+Zambia,894,2023,8786.74,E
+Zambia,894,2024,8795.73,E
+Zimbabwe,716,2014,850,E
+Zimbabwe,716,2015,500,E
+Zimbabwe,716,2016,700,E
+Zimbabwe,716,2017,545.66,I
+Zimbabwe,716,2018,491.71,I
+Zimbabwe,716,2019,531,A
+Zimbabwe,716,2020,579,A
+Zimbabwe,716,2021,608,A
+Zimbabwe,716,2022,681,A
+Zimbabwe,716,2023,665.49,I
+Zimbabwe,716,2024,572,A
