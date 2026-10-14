@@ -8,7 +8,7 @@
     "subtitle": "Distribution of 9,003 Coffee Review ratings, 1997-2026"
   },
   "data": {
-    "url": "Data/reviews_trimmed.csv",
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
     "format": { "type": "csv", "parse": { "rating": "number" } }
   },
   "transform": [{ "filter": "isValid(datum.rating)" }],
