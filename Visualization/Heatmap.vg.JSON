@@ -8,7 +8,7 @@
   "subtitle": ["Share of each year's Coffee Review ratings by roast level.", "Blank = no reviews. 2000 omitted (roast not recorded); 2026 is a partial year."]
 },
   "data": {
-    "url": "Data/reviews_trimmed.csv",
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
     "format": { "type": "csv", "parse": { "review_year": "number" } }
   },
   "transform": [
