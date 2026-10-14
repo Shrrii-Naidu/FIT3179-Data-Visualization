@@ -8,7 +8,7 @@
     "subtitle": "Production of the six biggest producers, indexed to 2014 = 100"
   },
   "data": {
-    "url": "Data/fao_production.csv",
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/fao_production.csv",
     "format": { "type": "csv", "parse": { "year": "number", "tonnes": "number", "m49": "number" } }
   },
   "transform": [
