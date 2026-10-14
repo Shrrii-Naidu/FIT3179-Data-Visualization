@@ -1,0 +1,30 @@
+body {
+  background-color: #ece0d1;
+  color: #38220f;
+}
+
+h1 {
+  font-family: "Berkshire Swash", serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-style: normal;
+  text-align: center;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 0 40px 24px;
+}
+
+.vega-embed {
+  display: block !important;
+}
