@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Coffee grows in a narrow belt, and per person it peaks in a few small producers",
+    "subtitle": "Coffee produced per person by country, 2024"
+  },
+  "width": 800,
+  "height": 420,
+  "padding": {"left": 5, "right": 5, "top": 5, "bottom": 100},
+  "background": "#ece0d1",
+  "projection": {"type": "equalEarth"},
+    "layer": [
+    {
+      "data": {
+        "url": "https://fit3179.github.io/Vega-Lite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {"filter": "datum.properties.NAME !== 'Antarctica'"},
+        {"calculate": "toNumber(datum.properties.ISO_N3)", "as": "m49"},
+        {
+          "lookup": "m49",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+              "format": {"type": "csv", "parse": {"m49": "number", "tonnes": "number", "kg_pp": "number"}}
+            },
+            "key": "m49",
+            "fields": ["tonnes", "kg_pp"]
+          }
+        },
+        {
+          "calculate": "!isValid(datum.kg_pp) || datum.kg_pp <= 0 ? 0 : datum.kg_pp < 1 ? 1 : datum.kg_pp < 5 ? 2 : datum.kg_pp < 15 ? 3 : datum.kg_pp < 30 ? 4 : 5",
+          "as": "cls"
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "#ece0d1", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "cls",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1, 2, 3, 4, 5],
+            "range": ["#f4f6ec", "#dfeac4", "#bcd58f", "#8dbb62", "#4f9140", "#1f5f2b"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "kg_pp", "type": "quantitative", "title": "kg per person", "format": ".1f"},
+          {"field": "tonnes", "type": "quantitative", "title": "Total tonnes", "format": ","}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"t": "Coffee produced per person, 2024"}]},
+      "transform": [{"calculate": "datum.t", "as": "t2"}],
+      "mark": {"type": "text", "align": "left", "baseline": "top", "fontSize": 12, "fontWeight": "bold", "color": "#6f4e37"},
+      "encoding": {
+        "x": {"value": 55},
+        "y": {"value": 432},
+        "text": {"field": "t2", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"i": 0, "label": "No production", "c": "#f4f6ec"},
+          {"i": 1, "label": "Under 1 kg", "c": "#dfeac4"},
+          {"i": 2, "label": "1 to 5 kg", "c": "#bcd58f"},
+          {"i": 3, "label": "5 to 15 kg", "c": "#8dbb62"},
+          {"i": 4, "label": "15 to 30 kg", "c": "#4f9140"},
+          {"i": 5, "label": "Over 30 kg", "c": "#1f5f2b"}
+        ]
+      },
+      "transform": [
+        {"calculate": "55 + datum.i * 116", "as": "x0"},
+        {"calculate": "datum.x0 + 110", "as": "x1"}
+      ],
+      "mark": {"type": "rect", "stroke": "#b9ad99", "strokeWidth": 0.5},
+      "encoding": {
+        "x": {"field": "x0", "type": "quantitative", "scale": null},
+        "x2": {"field": "x1"},
+        "y": {"value": 452},
+        "y2": {"value": 472},
+        "fill": {"field": "c", "type": "nominal", "scale": null, "legend": null}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"i": 0, "label": "No production"},
+          {"i": 1, "label": "Under 1 kg"},
+          {"i": 2, "label": "1 to 5 kg"},
+          {"i": 3, "label": "5 to 15 kg"},
+          {"i": 4, "label": "15 to 30 kg"},
+          {"i": 5, "label": "Over 30 kg"}
+        ]
+      },
+      "transform": [{"calculate": "55 + datum.i * 116 + 55", "as": "xm"}],
+      "mark": {"type": "text", "baseline": "top", "fontSize": 11, "color": "#38220f"},
+      "encoding": {
+        "x": {"field": "xm", "type": "quantitative", "scale": null},
+        "y": {"value": 478},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Montserrat",
+    "view": {"stroke": null},
+    "title": {
+      "font": "Montserrat",
+      "fontSize": 16,
+      "color": "#38220f",
+      "subtitleFont": "Montserrat",
+      "subtitleColor": "#6f4e37"
+    }
+  }
+}
