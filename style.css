@@ -25,6 +25,14 @@ h2 {
   margin: 0 0 40px 24px;
 }
 
+.chart.center {
+  margin: 0 auto 40px auto;
+}
+.chart.center .vega-embed {
+  display: block !important;
+  margin: 0 auto;
+}
+
 .vega-embed {
   display: block !important;
 }
