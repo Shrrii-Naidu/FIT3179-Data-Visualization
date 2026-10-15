@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 450,
+  "background": "#ece0d1",
+  "title": {
+  "text": ["Growing more doesn't mean rating higher:", "Brazil grows 68 times more than Kenya but averages 3 points lower"],
+  "subtitle": ["Average Coffee Review rating vs 2024 production, by country", "(single-origin coffees, countries with 30+ reviews)"]
+},
+  "data": {
+    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/scatter.csv",
+    "format": { "type": "csv", "parse": { "avg_rating": "number", "n_reviews": "number", "tonnes": "number" } }
+  },
+  "encoding": {
+    "x": { "field": "tonnes", "type": "quantitative", "scale": { "type": "log" },
+           "axis": { "title": "Production in 2024 (tonnes, log scale)", "format": "~s" } },
+    "y": { "field": "avg_rating", "type": "quantitative", "scale": { "zero": false },
+           "axis": { "title": "Average rating (out of 100)" } }
+  },
+  "layer": [
+    {
+      "mark": { "type": "point", "filled": true, "color": "#b08968", "opacity": 0.9 },
+      "encoding": {
+        "size": { "field": "n_reviews", "type": "quantitative",
+                  "legend": { "title": "Number of reviews" }, "scale": { "range": [60, 900] } },
+        "tooltip": [
+          { "field": "country", "title": "Country" },
+          { "field": "avg_rating", "title": "Average rating", "format": ".1f" },
+          { "field": "tonnes", "title": "Tonnes", "format": "," },
+          { "field": "n_reviews", "title": "Reviews" }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.n_reviews >= 100" }],
+      "mark": { "type": "text", "dy": -14, "fontSize": 11, "color": "#38220f" },
+      "encoding": { "text": { "field": "country" } }
+    }
+  ],
+  "config": {
+    "font": "Montserrat",
+    "view": { "stroke": null },
+    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
+               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
+    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
+              "titleFont": "Montserrat", "titleColor": "#6f4e37",
+              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" },
+    "legend": { "labelFont": "Montserrat", "titleFont": "Montserrat",
+                "labelColor": "#38220f", "titleColor": "#6f4e37" }
+  }
+}
