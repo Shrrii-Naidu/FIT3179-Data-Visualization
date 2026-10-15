@@ -14,8 +14,8 @@
   "encoding": {
     "x": { "field": "tonnes", "type": "quantitative", "scale": { "type": "log" },
            "axis": { "title": "Production in 2024 (tonnes, log scale)", "format": "~s" } },
-    "y": { "field": "avg_rating", "type": "quantitative", "scale": { "domain": [0, 100] },
-       "axis": { "title": "Average rating (out of 100)" } }
+    "y": { "field": "avg_rating", "type": "quantitative", "scale": { "zero": false },
+           "axis": { "title": "Average rating (out of 100)" } }
   },
   "layer": [
     {
