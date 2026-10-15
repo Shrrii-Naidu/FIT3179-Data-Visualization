@@ -36,3 +36,29 @@ h2 {
 .vega-embed {
   display: block !important;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0 24px 40px 24px;
+}
+.row .chart {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  flex: 0 0 auto;
+}
+.note {
+  flex: 1;
+  min-width: 260px;
+  max-width: 480px;
+  color: #38220f;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.note h3 {
+  margin: 0 0 10px 0;
+  color: #6f4e37;
+}
