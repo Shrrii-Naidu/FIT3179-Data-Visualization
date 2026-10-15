@@ -52,7 +52,7 @@ h2 {
 .note {
   flex: 1;
   min-width: 260px;
-  max-width: 480px;
+  max-width: 600px;
   color: #38220f;
   font-family: "Times New Roman", serif;
   font-size: 20px;
