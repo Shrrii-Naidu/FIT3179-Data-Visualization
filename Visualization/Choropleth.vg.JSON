@@ -9,23 +9,33 @@
   "padding": {"left": 5, "right": 5, "top": 5, "bottom": 100},
   "background": "#ece0d1",
   "projection": {"type": "equalEarth"},
-    "layer": [
+  "layer": [
+    {
+      "data": {"sphere": true},
+      "mark": {"type": "geoshape", "fill": "#e4ece9", "stroke": "#b9ad99", "strokeWidth": 0.8}
+    },
     {
       "data": {
-        "url": "https://fit3179.github.io/Vega-Lite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "#c9d6d2", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "transform": [
         {"filter": "datum.properties.NAME !== 'Antarctica'"},
-        {"calculate": "toNumber(datum.properties.ISO_N3)", "as": "m49"},
         {
-          "lookup": "m49",
+          "lookup": "properties.NAME",
           "from": {
             "data": {
               "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
-              "format": {"type": "csv", "parse": {"m49": "number", "tonnes": "number", "kg_pp": "number"}}
+              "format": {"type": "csv", "parse": {"tonnes": "number", "kg_pp": "number"}}
             },
-            "key": "m49",
+            "key": "name",
             "fields": ["tonnes", "kg_pp"]
           }
         },
@@ -34,7 +44,7 @@
           "as": "cls"
         }
       ],
-      "mark": {"type": "geoshape", "stroke": "#ece0d1", "strokeWidth": 0.5},
+      "mark": {"type": "geoshape", "stroke": "#c9bfae", "strokeWidth": 0.5},
       "encoding": {
         "color": {
           "field": "cls",
