@@ -29,8 +29,10 @@
     "y": { "field": "index", "type": "quantitative",
            "axis": { "title": "Production index (2014 = 100)" }  },
     "color": { "field": "country", "type": "nominal",
-               "legend": { "title": null, "orient": "right", "labelFontSize": 12, "symbolStrokeWidth": 4 },
-               "scale": { "range": ["#6f4e37","#c97b3d","#7d9b52","#4f7c9a","#b24b4b","#8a6bb0"] } }
+           "legend": { "title": null, "orient": "right", "labelFontSize": 12, "symbolStrokeWidth": 4 },
+           "scale": {
+             "domain": ["Brazil","Colombia","Ethiopia","Indonesia","Uganda","Vietnam"],
+             "range": ["#5a3a24","#E69F00","#0072B2","#56B4E9","#D55E00","#CC79A7"] } }
   },
   "layer": [
     { "mark": { "type": "line", "strokeWidth": 2.5 } },
