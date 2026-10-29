@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The biggest producers rank far lower for quality, with Ethiopia the exception",
+    "subtitle": "Rank among origins with 10+ reviews (1 = highest). Hover over a line to highlight a country.",
+    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#6b5f55",
+    "offset": 14
+  },
+  "width": 460,
+  "height": 400,
+  "padding": {"left": 10, "right": 10, "top": 10, "bottom": 10},
+  "background": "#ece0d1",
+  "config": {
+    "font": "Montserrat",
+    "view": {"stroke": null},
+    "title": {"font": "Montserrat", "color": "#38220f"},
+    "text": {"font": "Montserrat"}
+  },
+  "data": {"url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/scatter.csv", "format": {"type": "csv", "parse": {"tonnes": "number", "avg_rating": "number", "n_reviews": "number"}}},
+  "transform": [
+    {"calculate": "datum.country", "as": "c"},
+    {"filter": "datum.n_reviews >= 10"},
+    {"window": [{"op": "rank", "field": "tonnes", "as": "prod_rank"}], "sort": [{"field": "tonnes", "order": "descending"}]},
+    {"window": [{"op": "rank", "field": "avg_rating", "as": "q_rank"}], "sort": [{"field": "avg_rating", "order": "descending"}]},
+    {"filter": {"field": "c", "oneOf": ["Brazil", "Colombia", "Ethiopia", "Indonesia", "Uganda", "Vietnam"]}},
+    {"calculate": "indexof(['Brazil', 'Ethiopia'], datum.c) >= 0", "as": "emph"},
+    {"fold": ["prod_rank", "q_rank"], "as": ["measure", "rank"]},
+    {"calculate": "datum.measure == 'prod_rank' ? 'Production' : 'Quality'", "as": "side"},
+    {"calculate": "datum.c + '  #' + datum.rank", "as": "lbl"}
+  ],
+  "encoding": {
+    "x": {"field": "side", "type": "ordinal", "sort": ["Production", "Quality"],
+          "scale": {"type": "point", "padding": 0.0},
+          "axis": {"orient": "top", "title": null, "domain": false, "ticks": false, "labelAngle": 0, "labelFontSize": 13, "labelFontWeight": "bold", "labelColor": "#6b5f55", "labelPadding": 12, "labelExpr": "datum.value + ' rank'"}},
+    "y": {"field": "rank", "type": "quantitative", "scale": {"reverse": true, "zero": false, "nice": false, "padding": 18}, "axis": null}
+  },
+  "layer": [
+    {
+      "params": [{"name": "hover", "select": {"type": "point", "fields": ["c"], "on": "mouseover", "clear": "mouseout"}}],
+      "mark": {"type": "line", "strokeWidth": 18, "opacity": 0.01, "color": "#000000"},
+      "encoding": {"detail": {"field": "c", "type": "nominal"}}
+    },
+    {
+      "mark": {"type": "line", "interpolate": "linear", "strokeCap": "round"},
+      "encoding": {
+        "detail": {"field": "c", "type": "nominal"},
+        "color": {"condition": [{"param": "hover", "empty": false, "value": "#2a2420"}, {"test": "datum.emph", "value": "#2a2420"}], "value": "#b9b0a5"},
+        "strokeWidth": {"condition": [{"param": "hover", "empty": false, "value": 5}, {"test": "datum.emph", "value": 4}], "value": 1.6}
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 110, "opacity": 1},
+      "encoding": {
+        "color": {"field": "side", "type": "nominal", "legend": null,
+                  "scale": {"domain": ["Production", "Quality"], "range": ["#0072B2", "#E69F00"]}},
+        "tooltip": [
+          {"field": "c", "title": "Country"},
+          {"field": "prod_rank", "title": "Production rank"},
+          {"field": "q_rank", "title": "Quality rank"},
+          {"field": "tonnes", "type": "quantitative", "title": "Tonnes produced", "format": ","},
+          {"field": "avg_rating", "type": "quantitative", "title": "Average rating", "format": ".1f"},
+          {"field": "n_reviews", "type": "quantitative", "title": "Reviews", "format": ","}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.side == 'Production' && datum.emph"}],
+      "mark": {"type": "text", "align": "right", "dx": -12, "fontSize": 12, "fontWeight": "bold", "color": "#2a2420"},
+      "encoding": {"text": {"field": "lbl", "type": "nominal"}}
+    },
+    {
+      "transform": [{"filter": "datum.side == 'Production' && !datum.emph"}],
+      "mark": {"type": "text", "align": "right", "dx": -12, "fontSize": 12, "color": "#6b5f55"},
+      "encoding": {"text": {"field": "lbl", "type": "nominal"}}
+    },
+    {
+      "transform": [{"filter": "datum.side == 'Quality' && datum.emph"}],
+      "mark": {"type": "text", "align": "left", "dx": 12, "fontSize": 12, "fontWeight": "bold", "color": "#2a2420"},
+      "encoding": {"text": {"field": "lbl", "type": "nominal"}}
+    },
+    {
+      "transform": [{"filter": "datum.side == 'Quality' && !datum.emph"}],
+      "mark": {"type": "text", "align": "left", "dx": 12, "fontSize": 12, "color": "#6b5f55"},
+      "encoding": {"text": {"field": "lbl", "type": "nominal"}}
+    },
+    {
+      "data": {"values": [{"t": "Sources: FAOSTAT (tonnes produced) and Coffee Review via Kaggle (average rating)."}]},
+      "mark": {"type": "text", "align": "left", "baseline": "top", "fontSize": 11, "color": "#6b5f55"},
+      "encoding": {"x": {"value": -100}, "y": {"value": 440}, "text": {"field": "t", "type": "nominal"}}
+    }
+  ]
+}
