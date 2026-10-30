@@ -1,0 +1,395 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Brazil and Vietnam alone harvest nearly half of the world's coffee",
+    "subtitle": "Coffee produced by country, 2024 (circle area = tonnes)",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 13
+  },
+  "width": 800,
+  "height": 420,
+  "background": "#ece0d1",
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e4ece9",
+        "stroke": "#b9ad99",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#c9d6d2",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4eee3",
+        "stroke": "#d6c9b4",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.tonnes > 0"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "filter": "isValid(datum.lon) && isValid(datum.lat)"
+        }
+      ],
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "name"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#6f4e37",
+        "stroke": "#ece0d1"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "tonnes",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              3500000
+            ],
+            "range": [
+              0,
+              3000
+            ]
+          },
+          "legend": {
+            "title": "Tonnes produced",
+            "values": [
+              100000,
+              500000,
+              1000000,
+              3000000
+            ],
+            "format": "~s",
+            "symbolFillColor": "#6f4e37",
+            "symbolOpacity": 0.7
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.95
+          },
+          "value": 0.65
+        },
+        "strokeWidth": {
+          "condition": {
+            "param": "hover",
+            "value": 2
+          },
+          "value": 0.5
+        },
+        "order": {
+          "field": "tonnes",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "name",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "tonnes",
+            "type": "quantitative",
+            "title": "Tonnes (2024)",
+            "format": ","
+          },
+          {
+            "field": "kg_pp",
+            "type": "quantitative",
+            "title": "kg per person",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.tonnes >= 500000 && datum.name != 'Ethiopia'"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(datum.lat) + (sqrt(3000 * datum.tonnes / 3500000 / PI) + 9) / 3.2",
+          "as": "lat_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_label",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.name == 'Ethiopia'"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(datum.lon) + (sqrt(3000 * datum.tonnes / 3500000 / PI) + 8) / 3.0",
+          "as": "lon_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_label",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: FAOSTAT (coffee production, 2024). Natural Earth (map boundaries)."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 436
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Nicaragua is shown with its 2023 value as FAO has no 2024 figure. The Central African Republic is left out because its FAO figures look unreliable."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 452
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 13,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "text": {
+      "font": "Roboto Flex"
+    },
+    "legend": {
+      "labelFont": "Roboto Flex",
+      "titleFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#38220f",
+      "titleColor": "#6f4e37"
+    }
+  }
+}
