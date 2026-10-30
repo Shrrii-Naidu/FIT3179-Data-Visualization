@@ -1,0 +1,253 @@
+flow_id,origin,hub,reviews,step,lon,lat
+Brazil-Taiwan,Brazil,Taiwan,23,0,-52.671,-10.55
+Brazil-Taiwan,Brazil,Taiwan,23,1,-43.987,-5.431
+Brazil-Taiwan,Brazil,Taiwan,23,2,-35.304,-0.667
+Brazil-Taiwan,Brazil,Taiwan,23,3,-26.62,3.743
+Brazil-Taiwan,Brazil,Taiwan,23,4,-17.937,7.799
+Brazil-Taiwan,Brazil,Taiwan,23,5,-9.253,11.5
+Brazil-Taiwan,Brazil,Taiwan,23,6,-0.57,14.847
+Brazil-Taiwan,Brazil,Taiwan,23,7,8.114,17.84
+Brazil-Taiwan,Brazil,Taiwan,23,8,16.797,20.479
+Brazil-Taiwan,Brazil,Taiwan,23,9,25.481,22.763
+Brazil-Taiwan,Brazil,Taiwan,23,10,34.165,24.692
+Brazil-Taiwan,Brazil,Taiwan,23,11,42.848,26.268
+Brazil-Taiwan,Brazil,Taiwan,23,12,51.532,27.489
+Brazil-Taiwan,Brazil,Taiwan,23,13,60.215,28.355
+Brazil-Taiwan,Brazil,Taiwan,23,14,68.899,28.867
+Brazil-Taiwan,Brazil,Taiwan,23,15,77.582,29.025
+Brazil-Taiwan,Brazil,Taiwan,23,16,86.266,28.829
+Brazil-Taiwan,Brazil,Taiwan,23,17,94.949,28.278
+Brazil-Taiwan,Brazil,Taiwan,23,18,103.633,27.373
+Brazil-Taiwan,Brazil,Taiwan,23,19,112.316,26.114
+Brazil-Taiwan,Brazil,Taiwan,23,20,121,24.5
+Brazil-United States,Brazil,United States,143,0,-52.671,-10.55
+Brazil-United States,Brazil,United States,143,1,-54.937,-6.732
+Brazil-United States,Brazil,United States,143,2,-57.204,-3.051
+Brazil-United States,Brazil,United States,143,3,-59.47,0.495
+Brazil-United States,Brazil,United States,143,4,-61.737,3.905
+Brazil-United States,Brazil,United States,143,5,-64.003,7.18
+Brazil-United States,Brazil,United States,143,6,-66.27,10.318
+Brazil-United States,Brazil,United States,143,7,-68.536,13.321
+Brazil-United States,Brazil,United States,143,8,-70.803,16.188
+Brazil-United States,Brazil,United States,143,9,-73.069,18.919
+Brazil-United States,Brazil,United States,143,10,-75.336,21.515
+Brazil-United States,Brazil,United States,143,11,-77.602,23.974
+Brazil-United States,Brazil,United States,143,12,-79.868,26.298
+Brazil-United States,Brazil,United States,143,13,-82.135,28.486
+Brazil-United States,Brazil,United States,143,14,-84.401,30.538
+Brazil-United States,Brazil,United States,143,15,-86.668,32.455
+Brazil-United States,Brazil,United States,143,16,-88.934,34.235
+Brazil-United States,Brazil,United States,143,17,-91.201,35.88
+Brazil-United States,Brazil,United States,143,18,-93.467,37.389
+Brazil-United States,Brazil,United States,143,19,-95.734,38.763
+Brazil-United States,Brazil,United States,143,20,-98,40
+Colombia-Taiwan,Colombia,Taiwan,95,0,-72.949,3.91
+Colombia-Taiwan,Colombia,Taiwan,95,1,-63.252,8.645
+Colombia-Taiwan,Colombia,Taiwan,95,2,-53.554,12.99
+Colombia-Taiwan,Colombia,Taiwan,95,3,-43.857,16.945
+Colombia-Taiwan,Colombia,Taiwan,95,4,-34.159,20.51
+Colombia-Taiwan,Colombia,Taiwan,95,5,-24.462,23.685
+Colombia-Taiwan,Colombia,Taiwan,95,6,-14.764,26.47
+Colombia-Taiwan,Colombia,Taiwan,95,7,-5.067,28.865
+Colombia-Taiwan,Colombia,Taiwan,95,8,4.631,30.87
+Colombia-Taiwan,Colombia,Taiwan,95,9,14.328,32.484
+Colombia-Taiwan,Colombia,Taiwan,95,10,24.026,33.709
+Colombia-Taiwan,Colombia,Taiwan,95,11,33.723,34.543
+Colombia-Taiwan,Colombia,Taiwan,95,12,43.42,34.988
+Colombia-Taiwan,Colombia,Taiwan,95,13,53.118,35.042
+Colombia-Taiwan,Colombia,Taiwan,95,14,62.815,34.706
+Colombia-Taiwan,Colombia,Taiwan,95,15,72.513,33.98
+Colombia-Taiwan,Colombia,Taiwan,95,16,82.21,32.864
+Colombia-Taiwan,Colombia,Taiwan,95,17,91.908,31.358
+Colombia-Taiwan,Colombia,Taiwan,95,18,101.605,29.462
+Colombia-Taiwan,Colombia,Taiwan,95,19,111.303,27.176
+Colombia-Taiwan,Colombia,Taiwan,95,20,121,24.5
+Colombia-United States,Colombia,United States,743,0,-72.949,3.91
+Colombia-United States,Colombia,United States,743,1,-74.202,6.549
+Colombia-United States,Colombia,United States,743,2,-75.454,9.101
+Colombia-United States,Colombia,United States,743,3,-76.707,11.564
+Colombia-United States,Colombia,United States,743,4,-77.959,13.94
+Colombia-United States,Colombia,United States,743,5,-79.212,16.227
+Colombia-United States,Colombia,United States,743,6,-80.464,18.427
+Colombia-United States,Colombia,United States,743,7,-81.717,20.539
+Colombia-United States,Colombia,United States,743,8,-82.969,22.563
+Colombia-United States,Colombia,United States,743,9,-84.222,24.5
+Colombia-United States,Colombia,United States,743,10,-85.475,26.348
+Colombia-United States,Colombia,United States,743,11,-86.727,28.109
+Colombia-United States,Colombia,United States,743,12,-87.98,29.781
+Colombia-United States,Colombia,United States,743,13,-89.232,31.366
+Colombia-United States,Colombia,United States,743,14,-90.485,32.863
+Colombia-United States,Colombia,United States,743,15,-91.737,34.272
+Colombia-United States,Colombia,United States,743,16,-92.99,35.594
+Colombia-United States,Colombia,United States,743,17,-94.242,36.827
+Colombia-United States,Colombia,United States,743,18,-95.495,37.973
+Colombia-United States,Colombia,United States,743,19,-96.747,39.03
+Colombia-United States,Colombia,United States,743,20,-98,40
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,0,39.514,8.635
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,1,43.588,11.006
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,2,47.663,13.21
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,3,51.737,15.249
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,4,55.811,17.121
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,5,59.886,18.827
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,6,63.96,20.368
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,7,68.034,21.742
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,8,72.108,22.951
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,9,76.183,23.993
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,10,80.257,24.869
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,11,84.331,25.579
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,12,88.406,26.124
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,13,92.48,26.502
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,14,96.554,26.714
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,15,100.628,26.76
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,16,104.703,26.64
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,17,108.777,26.354
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,18,112.851,25.902
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,19,116.926,25.284
+Ethiopia-Taiwan,Ethiopia,Taiwan,525,20,121,24.5
+Ethiopia-United States,Ethiopia,United States,1007,0,39.514,8.635
+Ethiopia-United States,Ethiopia,United States,1007,1,32.638,12.883
+Ethiopia-United States,Ethiopia,United States,1007,2,25.763,16.849
+Ethiopia-United States,Ethiopia,United States,1007,3,18.887,20.533
+Ethiopia-United States,Ethiopia,United States,1007,4,12.011,23.935
+Ethiopia-United States,Ethiopia,United States,1007,5,5.136,27.055
+Ethiopia-United States,Ethiopia,United States,1007,6,-1.74,29.892
+Ethiopia-United States,Ethiopia,United States,1007,7,-8.616,32.448
+Ethiopia-United States,Ethiopia,United States,1007,8,-15.492,34.721
+Ethiopia-United States,Ethiopia,United States,1007,9,-22.367,36.713
+Ethiopia-United States,Ethiopia,United States,1007,10,-29.243,38.422
+Ethiopia-United States,Ethiopia,United States,1007,11,-36.119,39.849
+Ethiopia-United States,Ethiopia,United States,1007,12,-42.994,40.994
+Ethiopia-United States,Ethiopia,United States,1007,13,-49.87,41.857
+Ethiopia-United States,Ethiopia,United States,1007,14,-56.746,42.438
+Ethiopia-United States,Ethiopia,United States,1007,15,-63.621,42.737
+Ethiopia-United States,Ethiopia,United States,1007,16,-70.497,42.754
+Ethiopia-United States,Ethiopia,United States,1007,17,-77.373,42.489
+Ethiopia-United States,Ethiopia,United States,1007,18,-84.249,41.941
+Ethiopia-United States,Ethiopia,United States,1007,19,-91.124,41.112
+Ethiopia-United States,Ethiopia,United States,1007,20,-98,40
+Guatemala-Taiwan,Guatemala,Taiwan,78,0,-90.355,15.694
+Guatemala-Taiwan,Guatemala,Taiwan,78,1,-79.787,20.154
+Guatemala-Taiwan,Guatemala,Taiwan,78,2,-69.22,24.19
+Guatemala-Taiwan,Guatemala,Taiwan,78,3,-58.652,27.803
+Guatemala-Taiwan,Guatemala,Taiwan,78,4,-48.084,30.994
+Guatemala-Taiwan,Guatemala,Taiwan,78,5,-37.516,33.761
+Guatemala-Taiwan,Guatemala,Taiwan,78,6,-26.949,36.105
+Guatemala-Taiwan,Guatemala,Taiwan,78,7,-16.381,38.026
+Guatemala-Taiwan,Guatemala,Taiwan,78,8,-5.813,39.524
+Guatemala-Taiwan,Guatemala,Taiwan,78,9,4.755,40.599
+Guatemala-Taiwan,Guatemala,Taiwan,78,10,15.322,41.251
+Guatemala-Taiwan,Guatemala,Taiwan,78,11,25.89,41.48
+Guatemala-Taiwan,Guatemala,Taiwan,78,12,36.458,41.285
+Guatemala-Taiwan,Guatemala,Taiwan,78,13,47.026,40.668
+Guatemala-Taiwan,Guatemala,Taiwan,78,14,57.593,39.627
+Guatemala-Taiwan,Guatemala,Taiwan,78,15,68.161,38.164
+Guatemala-Taiwan,Guatemala,Taiwan,78,16,78.729,36.277
+Guatemala-Taiwan,Guatemala,Taiwan,78,17,89.297,33.968
+Guatemala-Taiwan,Guatemala,Taiwan,78,18,99.865,31.235
+Guatemala-Taiwan,Guatemala,Taiwan,78,19,110.432,28.079
+Guatemala-Taiwan,Guatemala,Taiwan,78,20,121,24.5
+Guatemala-United States,Guatemala,United States,363,0,-90.355,15.694
+Guatemala-United States,Guatemala,United States,363,1,-90.737,17.393
+Guatemala-United States,Guatemala,United States,363,2,-91.12,19.042
+Guatemala-United States,Guatemala,United States,363,3,-91.502,20.639
+Guatemala-United States,Guatemala,United States,363,4,-91.884,22.186
+Guatemala-United States,Guatemala,United States,363,5,-92.266,23.681
+Guatemala-United States,Guatemala,United States,363,6,-92.648,25.126
+Guatemala-United States,Guatemala,United States,363,7,-93.031,26.52
+Guatemala-United States,Guatemala,United States,363,8,-93.413,27.862
+Guatemala-United States,Guatemala,United States,363,9,-93.795,29.154
+Guatemala-United States,Guatemala,United States,363,10,-94.178,30.395
+Guatemala-United States,Guatemala,United States,363,11,-94.56,31.585
+Guatemala-United States,Guatemala,United States,363,12,-94.942,32.724
+Guatemala-United States,Guatemala,United States,363,13,-95.324,33.812
+Guatemala-United States,Guatemala,United States,363,14,-95.707,34.849
+Guatemala-United States,Guatemala,United States,363,15,-96.089,35.834
+Guatemala-United States,Guatemala,United States,363,16,-96.471,36.77
+Guatemala-United States,Guatemala,United States,363,17,-96.853,37.654
+Guatemala-United States,Guatemala,United States,363,18,-97.236,38.487
+Guatemala-United States,Guatemala,United States,363,19,-97.618,39.269
+Guatemala-United States,Guatemala,United States,363,20,-98,40
+Indonesia-Taiwan,Indonesia,Taiwan,36,0,113.96,-0.252
+Indonesia-Taiwan,Indonesia,Taiwan,36,1,114.312,1.475
+Indonesia-Taiwan,Indonesia,Taiwan,36,2,114.664,3.15
+Indonesia-Taiwan,Indonesia,Taiwan,36,3,115.016,4.773
+Indonesia-Taiwan,Indonesia,Taiwan,36,4,115.368,6.345
+Indonesia-Taiwan,Indonesia,Taiwan,36,5,115.72,7.866
+Indonesia-Taiwan,Indonesia,Taiwan,36,6,116.072,9.335
+Indonesia-Taiwan,Indonesia,Taiwan,36,7,116.424,10.753
+Indonesia-Taiwan,Indonesia,Taiwan,36,8,116.776,12.119
+Indonesia-Taiwan,Indonesia,Taiwan,36,9,117.128,13.434
+Indonesia-Taiwan,Indonesia,Taiwan,36,10,117.48,14.697
+Indonesia-Taiwan,Indonesia,Taiwan,36,11,117.832,15.909
+Indonesia-Taiwan,Indonesia,Taiwan,36,12,118.184,17.07
+Indonesia-Taiwan,Indonesia,Taiwan,36,13,118.536,18.179
+Indonesia-Taiwan,Indonesia,Taiwan,36,14,118.888,19.236
+Indonesia-Taiwan,Indonesia,Taiwan,36,15,119.24,20.242
+Indonesia-Taiwan,Indonesia,Taiwan,36,16,119.592,21.197
+Indonesia-Taiwan,Indonesia,Taiwan,36,17,119.944,22.1
+Indonesia-Taiwan,Indonesia,Taiwan,36,18,120.296,22.951
+Indonesia-Taiwan,Indonesia,Taiwan,36,19,120.648,23.751
+Indonesia-Taiwan,Indonesia,Taiwan,36,20,121,24.5
+Indonesia-United States,Indonesia,United States,345,0,113.96,-0.252
+Indonesia-United States,Indonesia,United States,345,1,103.362,5.86
+Indonesia-United States,Indonesia,United States,345,2,92.764,11.54
+Indonesia-United States,Indonesia,United States,345,3,82.166,16.789
+Indonesia-United States,Indonesia,United States,345,4,71.568,21.606
+Indonesia-United States,Indonesia,United States,345,5,60.97,25.992
+Indonesia-United States,Indonesia,United States,345,6,50.372,29.946
+Indonesia-United States,Indonesia,United States,345,7,39.774,33.469
+Indonesia-United States,Indonesia,United States,345,8,29.176,36.561
+Indonesia-United States,Indonesia,United States,345,9,18.578,39.22
+Indonesia-United States,Indonesia,United States,345,10,7.98,41.449
+Indonesia-United States,Indonesia,United States,345,11,-2.618,43.246
+Indonesia-United States,Indonesia,United States,345,12,-13.216,44.611
+Indonesia-United States,Indonesia,United States,345,13,-23.814,45.545
+Indonesia-United States,Indonesia,United States,345,14,-34.412,46.047
+Indonesia-United States,Indonesia,United States,345,15,-45.01,46.118
+Indonesia-United States,Indonesia,United States,345,16,-55.608,45.757
+Indonesia-United States,Indonesia,United States,345,17,-66.206,44.965
+Indonesia-United States,Indonesia,United States,345,18,-76.804,43.742
+Indonesia-United States,Indonesia,United States,345,19,-87.402,42.087
+Indonesia-United States,Indonesia,United States,345,20,-98,40
+Kenya-Taiwan,Kenya,Taiwan,150,0,37.759,0.594
+Kenya-Taiwan,Kenya,Taiwan,150,1,41.921,3.435
+Kenya-Taiwan,Kenya,Taiwan,150,2,46.083,6.102
+Kenya-Taiwan,Kenya,Taiwan,150,3,50.245,8.597
+Kenya-Taiwan,Kenya,Taiwan,150,4,54.407,10.918
+Kenya-Taiwan,Kenya,Taiwan,150,5,58.569,13.066
+Kenya-Taiwan,Kenya,Taiwan,150,6,62.731,15.041
+Kenya-Taiwan,Kenya,Taiwan,150,7,66.893,16.842
+Kenya-Taiwan,Kenya,Taiwan,150,8,71.055,18.471
+Kenya-Taiwan,Kenya,Taiwan,150,9,75.217,19.926
+Kenya-Taiwan,Kenya,Taiwan,150,10,79.38,21.208
+Kenya-Taiwan,Kenya,Taiwan,150,11,83.542,22.316
+Kenya-Taiwan,Kenya,Taiwan,150,12,87.704,23.252
+Kenya-Taiwan,Kenya,Taiwan,150,13,91.866,24.014
+Kenya-Taiwan,Kenya,Taiwan,150,14,96.028,24.603
+Kenya-Taiwan,Kenya,Taiwan,150,15,100.19,25.019
+Kenya-Taiwan,Kenya,Taiwan,150,16,104.352,25.262
+Kenya-Taiwan,Kenya,Taiwan,150,17,108.514,25.331
+Kenya-Taiwan,Kenya,Taiwan,150,18,112.676,25.227
+Kenya-Taiwan,Kenya,Taiwan,150,19,116.838,24.95
+Kenya-Taiwan,Kenya,Taiwan,150,20,121,24.5
+Kenya-United States,Kenya,United States,503,0,37.759,0.594
+Kenya-United States,Kenya,United States,503,1,30.971,5.25
+Kenya-United States,Kenya,United States,503,2,24.183,9.624
+Kenya-United States,Kenya,United States,503,3,17.395,13.714
+Kenya-United States,Kenya,United States,503,4,10.607,17.522
+Kenya-United States,Kenya,United States,503,5,3.819,21.048
+Kenya-United States,Kenya,United States,503,6,-2.969,24.29
+Kenya-United States,Kenya,United States,503,7,-9.757,27.25
+Kenya-United States,Kenya,United States,503,8,-16.545,29.927
+Kenya-United States,Kenya,United States,503,9,-23.333,32.322
+Kenya-United States,Kenya,United States,503,10,-30.12,34.433
+Kenya-United States,Kenya,United States,503,11,-36.908,36.262
+Kenya-United States,Kenya,United States,503,12,-43.696,37.808
+Kenya-United States,Kenya,United States,503,13,-50.484,39.072
+Kenya-United States,Kenya,United States,503,14,-57.272,40.053
+Kenya-United States,Kenya,United States,503,15,-64.06,40.751
+Kenya-United States,Kenya,United States,503,16,-70.848,41.166
+Kenya-United States,Kenya,United States,503,17,-77.636,41.299
+Kenya-United States,Kenya,United States,503,18,-84.424,41.148
+Kenya-United States,Kenya,United States,503,19,-91.212,40.716
+Kenya-United States,Kenya,United States,503,20,-98,40
