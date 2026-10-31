@@ -26,7 +26,7 @@
     {
       "mark": {
         "type": "bar",
-        "color": "#b08968"
+        "color": "#E69F00"
       },
       "encoding": {
         "x": {
@@ -85,7 +85,7 @@
           4,
           4
         ],
-        "color": "#6f4e37",
+        "color": "#38220f",
         "strokeWidth": 2
       },
       "encoding": {
@@ -93,6 +93,13 @@
           "datum": 90,
           "type": "quantitative"
         }
+      },
+      "data": {
+        "values": [
+          {
+            "x": 90
+          }
+        ]
       }
     },
     {
@@ -121,6 +128,13 @@
             "are 90 or above"
           ]
         }
+      },
+      "data": {
+        "values": [
+          {
+            "x": 90
+          }
+        ]
       }
     },
     {
