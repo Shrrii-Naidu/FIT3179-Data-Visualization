@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height": 380,
-  "background": "#ece0d1",
+  "background": "transparent",
   "title": {
     "text": "Share of World Production and Share of Reviews by Country",
     "subtitle": "Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews",
