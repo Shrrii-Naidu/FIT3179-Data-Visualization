@@ -4,48 +4,311 @@
   "height": 450,
   "background": "#ece0d1",
   "title": {
-  "text": ["Growing more doesn't mean rating higher:", "Brazil grows 68 times more than Kenya but averages 3 points lower"],
-  "subtitle": ["Average Coffee Review rating vs 2024 production, by country", "(single-origin coffees, countries with 30+ reviews)"]
-},
+    "text": "Coffee Production and Average Rating by Country, 2024",
+    "subtitle": "Brazil grows 68 times more than Kenya but averages 3 points lower",
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/scatter.csv",
-    "format": { "type": "csv", "parse": { "avg_rating": "number", "n_reviews": "number", "tonnes": "number" } }
+    "format": {
+      "type": "csv",
+      "parse": {
+        "avg_rating": "number",
+        "n_reviews": "number",
+        "tonnes": "number"
+      }
+    }
   },
   "encoding": {
-    "x": { "field": "tonnes", "type": "quantitative", "scale": { "type": "log" },
-           "axis": { "title": "Production in 2024 (tonnes, log scale)", "format": "~s" } },
-    "y": { "field": "avg_rating", "type": "quantitative", "scale": { "zero": false },
-           "axis": { "title": "Average rating (out of 100)" } }
+    "x": {
+      "field": "tonnes",
+      "type": "quantitative",
+      "scale": {
+        "type": "log"
+      },
+      "axis": {
+        "title": "Production in 2024 (tonnes, log scale)",
+        "format": "~s"
+      }
+    },
+    "y": {
+      "field": "avg_rating",
+      "type": "quantitative",
+      "scale": {
+        "zero": false
+      },
+      "axis": {
+        "title": "Average rating (out of 100)"
+      }
+    }
   },
   "layer": [
     {
-      "mark": { "type": "point", "filled": true, "color": "#b08968", "opacity": 0.9 },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#7a8b3a",
+        "stroke": "#4f5a24",
+        "strokeWidth": 0.8,
+        "opacity": 0.85
+      },
       "encoding": {
-        "size": { "field": "n_reviews", "type": "quantitative",
-                  "legend": { "title": "Number of reviews" }, "scale": { "range": [60, 900] } },
+        "size": {
+          "field": "n_reviews",
+          "type": "quantitative",
+          "legend": {
+            "title": "Number of reviews",
+            "values": [
+              100,
+              500,
+              1000,
+              1500
+            ],
+            "symbolFillColor": "#7a8b3a",
+            "symbolStrokeColor": "#4f5a24"
+          },
+          "scale": {
+            "range": [
+              60,
+              900
+            ]
+          }
+        },
         "tooltip": [
-          { "field": "country", "title": "Country" },
-          { "field": "avg_rating", "title": "Average rating", "format": ".1f" },
-          { "field": "tonnes", "title": "Tonnes", "format": "," },
-          { "field": "n_reviews", "title": "Reviews" }
+          {
+            "field": "country",
+            "title": "Country"
+          },
+          {
+            "field": "avg_rating",
+            "title": "Average rating",
+            "format": ".1f"
+          },
+          {
+            "field": "tonnes",
+            "title": "Tonnes",
+            "format": ","
+          },
+          {
+            "field": "n_reviews",
+            "title": "Reviews"
+          }
         ]
       }
     },
     {
-      "transform": [{ "filter": "datum.n_reviews >= 100" }],
-      "mark": { "type": "text", "dy": -14, "fontSize": 11, "color": "#38220f" },
-      "encoding": { "text": { "field": "country" } }
+      "transform": [
+        {
+          "filter": "indexof([\"Panama\", \"Brazil\", \"United States of America\", \"Costa Rica\", \"Guatemala\", \"Peru\", \"Indonesia\", \"Rwanda\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -12
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Ethiopia\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -28
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Colombia\", \"Kenya\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -22
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"El Salvador\", \"Mexico\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "center",
+        "baseline": "top",
+        "dy": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Nicaragua\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -10
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([\"Honduras\"], datum.country) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "#38220f",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10
+      },
+      "encoding": {
+        "text": {
+          "field": "country"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: FAOSTAT (coffee production, 2024) and Coffee Review via Kaggle. Single-origin coffees from countries with 30+ reviews."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 510
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "The vertical axis starts at 88.5 because the average ratings only range from about 89 to 94. The horizontal axis uses a log scale so that small and large producers fit on one axis."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 526
+        }
+      }
     }
   ],
   "config": {
-    "font": "Montserrat",
-    "view": { "stroke": null },
-    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
-               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
-    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
-              "titleFont": "Montserrat", "titleColor": "#6f4e37",
-              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" },
-    "legend": { "labelFont": "Montserrat", "titleFont": "Montserrat",
-                "labelColor": "#38220f", "titleColor": "#6f4e37" }
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "axis": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "titleFont": "Roboto Flex",
+      "titleFontSize": 12,
+      "titleColor": "#6f4e37",
+      "domainColor": "#38220f",
+      "tickColor": "#38220f",
+      "gridColor": "#d8c8b4"
+    },
+    "legend": {
+      "labelFont": "Roboto Flex",
+      "titleFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#38220f",
+      "titleColor": "#6f4e37"
+    },
+    "text": {
+      "font": "Roboto Flex"
+    }
   }
 }
