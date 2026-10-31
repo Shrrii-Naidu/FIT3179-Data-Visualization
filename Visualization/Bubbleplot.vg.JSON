@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1000,
   "height": 450,
-  "background": "#ece0d1",
+  "background": "transparent",
   "title": {
     "text": "Coffee Production and Average Rating by Country, 2024",
     "subtitle": "Brazil grows 68 times more than Kenya but averages 3 points lower",
