@@ -3,8 +3,9 @@
   "title": {
     "text": "Origin and Roaster Locations of Reviewed Single-Origin Coffees",
     "subtitle": "Most reviewed coffees from six origins are roasted in the United States and Taiwan",
-    "fontSize": 18,
-    "subtitleFontSize": 13
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "middle"
   },
   "width": 640,
   "height": 336,
@@ -12,7 +13,7 @@
     "left": 5,
     "right": 5,
     "top": 5,
-    "bottom": 70
+    "bottom": 55
   },
   "background": "#ece0d1",
   "projection": {
@@ -667,7 +668,7 @@
           "value": 0
         },
         "y": {
-          "value": 436
+          "value": 352
         }
       }
     },
@@ -675,7 +676,7 @@
       "data": {
         "values": [
           {
-            "t": "Shows reviewed coffees, not trade volumes. Six origins shown. 93% of their reviews were roasted in the United States (3,104) or Taiwan (907). Lines are drawn as curves."
+            "t": "Shows reviewed coffees, not trade volumes. Six origins are shown."
           }
         ]
       },
@@ -695,7 +696,35 @@
           "value": 0
         },
         "y": {
-          "value": 452
+          "value": 368
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "93% of their reviews were roasted in the United States (3,104) or Taiwan (907). Lines are drawn as curves."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 384
         }
       }
     }
@@ -707,11 +736,11 @@
     },
     "title": {
       "font": "Roboto Flex",
-      "fontSize": 18,
+      "fontSize": 16,
       "fontWeight": 500,
       "color": "#38220f",
       "subtitleFont": "Roboto Flex",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 12,
       "subtitleFontWeight": 400,
       "subtitleColor": "#6f4e37"
     },
