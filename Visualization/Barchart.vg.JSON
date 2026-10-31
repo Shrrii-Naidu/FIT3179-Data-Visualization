@@ -93,14 +93,14 @@
           "condition": [
             {
               "test": "datum.country === 'Brazil'",
-              "value": "#6f4e37"
+              "value": "#2c4a6b"
             },
             {
               "test": "datum.country === 'Vietnam' || datum.country === 'Colombia'",
-              "value": "#b08968"
+              "value": "#6f8fb0"
             }
           ],
-          "value": "#d6c3ab"
+          "value": "#c5d3e2"
         },
         "tooltip": [
           {
