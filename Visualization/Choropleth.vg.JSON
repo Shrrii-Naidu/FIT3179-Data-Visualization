@@ -14,7 +14,7 @@
     "top": 5,
     "bottom": 125
   },
-  "background": "#ece0d1",
+  "background": "transparent",
   "projection": {
     "type": "equalEarth"
   },
