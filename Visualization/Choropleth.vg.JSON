@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Coffee grows in a narrow belt, and per person it peaks in a few small producers",
-    "subtitle": "Coffee produced per person by country, 2024",
+    "text": "Coffee Production per Person by Country, 2024",
+    "subtitle": "Production per person peaks in a few small producers which is led by Honduras, Laos and Nicaragua",
     "fontSize": 18,
     "subtitleFontSize": 13
   },
