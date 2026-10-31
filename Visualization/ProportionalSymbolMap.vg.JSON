@@ -202,7 +202,7 @@
       },
       "transform": [
         {
-          "filter": "datum.tonnes >= 500000 && datum.name != 'Ethiopia'"
+          "filter": "datum.name == 'Vietnam'"
         },
         {
           "lookup": "name",
@@ -304,6 +304,191 @@
         },
         "latitude": {
           "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.name == 'Colombia'"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(datum.lon) - (sqrt(3000 * datum.tonnes / 3500000 / PI) + 14) / 3.0",
+          "as": "lon_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "right",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_label",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.name == 'Brazil'"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(datum.lon) + (sqrt(3000 * datum.tonnes / 3500000 / PI) + 14) / 3.0",
+          "as": "lon_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_label",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "name",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "tonnes": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.name == 'Indonesia'"
+        },
+        {
+          "lookup": "name",
+          "from": {
+            "data": {
+              "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/country_coordinates.csv",
+              "format": {
+                "type": "csv",
+                "parse": {
+                  "lon": "number",
+                  "lat": "number"
+                }
+              }
+            },
+            "key": "name",
+            "fields": [
+              "lon",
+              "lat"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(datum.lat) - (sqrt(3000 * datum.tonnes / 3500000 / PI) + 9) / 3.2",
+          "as": "lat_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "baseline": "top"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_label",
           "type": "quantitative"
         },
         "text": {
