@@ -1,0 +1,728 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Origin and Roaster Locations of Reviewed Single-Origin Coffees",
+    "subtitle": "Most reviewed coffees from six origins are roasted in the United States and Taiwan",
+    "fontSize": 18,
+    "subtitleFontSize": 13
+  },
+  "width": 800,
+  "height": 420,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 70
+  },
+  "background": "#ece0d1",
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e4ece9",
+        "stroke": "#b9ad99",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#c9d6d2",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/ne_110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f4eee3",
+        "stroke": "#d6c9b4",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout",
+            "fields": [
+              "flow_id"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "color": "#7b3fa0",
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "detail": {
+          "field": "flow_id",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "step",
+          "type": "quantitative"
+        },
+        "strokeWidth": {
+          "field": "reviews",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              1050
+            ],
+            "range": [
+              0,
+              16
+            ]
+          },
+          "legend": {
+            "title": "Reviews",
+            "values": [
+              50,
+              200,
+              500,
+              1000
+            ],
+            "symbolStrokeColor": "#7b3fa0",
+            "orient": "right",
+            "symbolFillColor": "#7b3fa0"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "value": 0.95
+          },
+          "value": 0.5
+        },
+        "tooltip": [
+          {
+            "field": "origin",
+            "type": "nominal",
+            "title": "Grown in"
+          },
+          {
+            "field": "hub",
+            "type": "nominal",
+            "title": "Roasted in"
+          },
+          {
+            "field": "reviews",
+            "type": "quantitative",
+            "title": "Reviews"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 0"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "origin"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#6f4e37",
+        "size": 60,
+        "stroke": "#ece0d1",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 0"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "origin"
+          ]
+        },
+        {
+          "filter": "indexof(['Brazil','Indonesia'], datum.origin) >= 0"
+        },
+        {
+          "calculate": "toNumber(datum.lon) + 2.5",
+          "as": "lon_l"
+        },
+        {
+          "calculate": "toNumber(datum.lat) - 1",
+          "as": "lat_l"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_l",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_l",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "origin",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 0"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "origin"
+          ]
+        },
+        {
+          "filter": "indexof(['Colombia','Guatemala'], datum.origin) >= 0"
+        },
+        {
+          "calculate": "toNumber(datum.lon) - 3.5",
+          "as": "lon_l"
+        },
+        {
+          "calculate": "toNumber(datum.lat) + (datum.origin == 'Ethiopia' ? 1 : 0)",
+          "as": "lat_l"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "right",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon_l",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_l",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "origin",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 0"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "origin"
+          ]
+        },
+        {
+          "filter": "datum.origin == 'Kenya'"
+        },
+        {
+          "calculate": "toNumber(datum.lat) - 3.5",
+          "as": "lat_l"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "center",
+        "baseline": "top"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_l",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "origin",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "id": "e",
+            "lon": 41.5,
+            "lat": 8.2,
+            "o": 0
+          },
+          {
+            "id": "e",
+            "lon": 60,
+            "lat": 3,
+            "o": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#38220f",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "detail": {
+          "field": "id",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "o",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Ethiopia",
+            "lon": 61,
+            "lat": 3
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#38220f",
+        "align": "left",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 20"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "reviews",
+              "as": "total"
+            },
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "hub"
+          ]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#1f5f6b",
+        "stroke": "#ece0d1",
+        "strokeWidth": 1,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "total",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              3200
+            ],
+            "range": [
+              60,
+              1400
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "hub",
+            "type": "nominal",
+            "title": "Roaster location"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Reviews (six origins)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/coffee_flows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "reviews": "number",
+            "step": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.step == 20"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "reviews",
+              "as": "total"
+            },
+            {
+              "op": "mean",
+              "field": "lon",
+              "as": "lon"
+            },
+            {
+              "op": "mean",
+              "field": "lat",
+              "as": "lat"
+            }
+          ],
+          "groupby": [
+            "hub"
+          ]
+        },
+        {
+          "calculate": "toNumber(datum.lat) + 6 + sqrt(1400*datum.total/3200)/3.2",
+          "as": "lat_l"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1f5f6b",
+        "baseline": "bottom"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat_l",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hub",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: Coffee Review via Kaggle (single-origin reviews)."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 436
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Shows reviewed coffees, not trade volumes. Six origins shown. 93% of their reviews were roasted in the United States (3,104) or Taiwan (907). Lines are drawn as curves."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 452
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 13,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "text": {
+      "font": "Roboto Flex"
+    },
+    "legend": {
+      "labelFont": "Roboto Flex",
+      "titleFont": "Roboto Flex",
+      "labelColor": "#38220f",
+      "titleColor": "#6f4e37"
+    }
+  }
+}
