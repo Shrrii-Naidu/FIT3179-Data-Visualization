@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Global Coffee Production by Country, 2024",
-    "subtitle": "Brazil and Vietnam harvest nearly half of the world's coffee",
+    "subtitle": "Brazil and Vietnam alone harvest nearly half of the world's coffee (circle area = tonnes)",
     "anchor": "middle",
     "fontSize": 16,
     "subtitleFontSize": 12
@@ -91,6 +91,10 @@
         },
         {
           "filter": "isValid(datum.lon) && isValid(datum.lat)"
+        },
+        {
+          "calculate": "({\"W. Sahara\": \"Western Sahara\", \"Dem. Rep. Congo\": \"Democratic Republic of the Congo\", \"Dominican Rep.\": \"Dominican Republic\", \"Falkland Is.\": \"Falkland Islands\", \"Fr. S. Antarctic Lands\": \"French Southern and Antarctic Lands\", \"Central African Rep.\": \"Central African Republic\", \"Eq. Guinea\": \"Equatorial Guinea\", \"Solomon Is.\": \"Solomon Islands\", \"N. Cyprus\": \"Northern Cyprus\", \"Bosnia and Herz.\": \"Bosnia and Herzegovina\", \"S. Sudan\": \"South Sudan\"})[datum.name] || datum.name",
+          "as": "country_full"
         }
       ],
       "params": [
@@ -109,7 +113,7 @@
       "mark": {
         "type": "circle",
         "color": "#6f4e37",
-        "stroke": "#ece0d1"
+        "stroke": "#f6f0e4"
       },
       "encoding": {
         "longitude": {
@@ -167,7 +171,7 @@
         },
         "tooltip": [
           {
-            "field": "name",
+            "field": "country_full",
             "type": "nominal",
             "title": "Country"
           },
@@ -180,7 +184,7 @@
           {
             "field": "kg_pp",
             "type": "quantitative",
-            "title": "kg per person",
+            "title": "Kilograms per person",
             "format": ".1f"
           }
         ]
