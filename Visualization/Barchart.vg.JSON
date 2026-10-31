@@ -7,7 +7,7 @@
   },
   "width": 560,
   "height": 320,
-  "background": "#ece0d1",
+  "background": "transparent",
   "config": {
     "font": "Roboto Flex",
     "title": {
