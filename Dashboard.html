@@ -1,80 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF 8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Flex:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            background-color:#ece0d1;
-            color: #38220f;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>The Coffee Gap</h1>
 
     <h2>Comparing the World's Coffee Harvest with Expert Ratings</h2>
-    <div class="row">
+    <div class="card">
         <div id="chart1" class="chart"></div>
         <div class="note">
-            <p>Coffee is one of the most traded crops in the world, but the countries that grow the most are not always the ones whose coffee gets talked about. This dashboard explores how much coffee each country harvests using data from FAO from 2014 to 2024 and to see the ratings of experts on coffee from these countries. Here we would like know if the countries that produce the highest volume of coffee get the most attention from expert reviewers. This map shows how much coffee each country produced in 2024, divided by its population, so small and large countries can be compared fairly. Each country is coloured into one of six classes, from “No production” (the palest shade) to “Over 30 kg” per person (the darkest green). Countries that don’t grow coffee are still shaded, so a blank space never gets confused with missing data. Here it is apparent that Honduras and the Central African Republic produced the most coffee per person in the world. </p>
+            <h3>Two countries harvest nearly half</h3>
+                <p>Brazil and Vietnam alone grow about 49% of the world's coffee.</p>
+                <p>Most other producers are far smaller.</p>
+            <p class="how">Circle area shows tonnes produced in 2024. Hover over a circle for the figure.</p>
         </div>
-        </div>
-    
-     <div class="row">
+    </div>
+
+    <div class="card">
         <div id="chart2" class="chart"></div>
         <div class="note">
-            <p>Coffee production is highly concentrated. In 2024, Brazil harvested about 3.4 million tonnes, more than Vietnam (about 2.0 million) and Colombia (about 0.8 million) combined. Together, these three countries stand far above the rest of the top 10, where output drops below 0.8 million tonnes from Indonesia onward. This is the “volume” side of the Coffee Gap: if a country’s coffee were judged on harvest size alone, Brazil and Vietnam would dominate. Now we will explore if the ratings from the expert corroborate this narrative.</p>
+            <h3>Small countries lead per person</h3>
+                <p>Honduras, Laos and Nicaragua produce the most coffee per person.</p>
+                <p>Countries that grow no coffee are shaded beige, not left blank.</p>
+            <p class="how">Darker green means more kilograms of coffee per person in 2024. Hover over a country for its value.</p>
         </div>
-        </div>
+    </div>
 
-     <div class="row">
+    <div class="card">
         <div id="chart3" class="chart"></div>
         <div class="note">
-            <p>Indexing each country to 2014 = 100 shows how fast production has grown, not how large it is. Uganda has grown the most: it peaked at about 230 in 2022 (more than double its 2014 output) and ended 2024 at about 183, roughly 80% higher than in 2014. Vietnam grew steadily to about 143. Brazil, the largest producer, has grown only about 20%, with swings between years, including a spike around 2020. Colombia is the least stable, falling to about 77 in 2021 before recovering to about 115. The gap between the biggest producers and the fastest-growing ones is a useful point to hold on to: the countries that are growing fastest are not the ones that already dominate volume.</p>
+            <h3>Brazil outgrows its closest rivals combined</h3>
+                <p>Brazil harvested about 3.4 million tonnes in 2024, more than Vietnam and Colombia combined.</p>
+                <p>Output drops below 0.8 million tonnes from Indonesia onward.</p>
+            <p class="how">Bars are sorted by tonnes produced. Hover over a bar for the figure.</p>
         </div>
-        </div>
+    </div>
 
-     <div class="row">
+    <div class="card">
         <div id="chart4" class="chart"></div>
         <div class="note">
-            <p>Coffee Review ratings are heavily bunched at the top of the scale. Of the 9,003 coffees scored between 1997 and 2026, about 80% received 90 points or more, and the most common score is 93, with nearly 1,900 reviews. Only a thin tail of coffees falls below 85, and very few score under 75. This is what you would expect from a magazine that reviews coffees roasters choose to send in: weaker coffees rarely get submitted, so the sample leans towards specialty-grade beans. It also means differences between origins will be small, since most coffees sit within a few points of each other. The charts that follow compare origins with that narrow range in mind.</p>
+            <h3>Fast growth is not where the volume is</h3>
+                <p>Uganda is up about 80% since 2014, while Brazil is up about 20%.</p>
+                <p>Colombia is the least stable, dipping to about 77 in 2021.</p>
+            <p class="how">Each line is indexed so that 2014 equals 100. A value of 150 means 50% more than in 2014.</p>
         </div>
-        </div>
+    </div>
 
-     <div class="row">
+    <div class="card">
         <div id="chart5" class="chart"></div>
         <div class="note">
-            <p>Each column shows how Coffee Review’s ratings in a given year were split across roast levels, and darker cells mean a bigger share. In the late 1990s and early 2000s, the darkest cells sit in the Medium and Medium-Dark rows, so those roasts made up most of what was reviewed. From about 2013, Medium-Light takes over, reaching roughly 60 to 70% of reviews in the late 2010s and early 2020s. In the last few years the darkest cells move up to Light, which now holds the largest share in 2024 to 2026. Dark and Very Dark roasts have become rare. The shift matches the move of specialty coffee towards lighter roasts, which is worth keeping in mind when comparing origins, since roast level can affect scores. The 2026 column is a partial year, so its shares are less reliable.</p>
+            <h3>Most ratings sit at the top of the scale</h3>
+                <p>About 80% of the 9,003 scored coffees receive 90 points or more.</p>
+                <p>The most common score is 93.</p>
+            <p class="how">Each bar counts the reviews that received one score out of 100.</p>
         </div>
-        </div>
+    </div>
 
-     <div class="row">
+    <div class="card">
         <div id="chart6" class="chart"></div>
         <div class="note">
-            <p>Each box shows the middle half of ratings for one origin, and the line inside is the median. Medians run from about 91 (Brazil and Mexico) to about 94 (Panama), a gap of only three points. Panama and the United States sit highest, followed by Colombia, Costa Rica, Ethiopia and Kenya at about 93. Brazil, the world’s largest producer, has one of the lowest medians, and Indonesia and Brazil have the widest middle boxes, so their ratings vary more. Colombia and Ethiopia have long runs of low outliers, meaning a few coffees scored far below their usual level. Because only origins with 100 or more reviews are shown, and the coffees are specialty submissions, this is a comparison among well-reviewed origins, not a ranking of every country’s coffee.</p>
+            <h3>Light roasts are catching up</h3>
+                <p>Medium-Light roasts led from 2013 to 2023.</p>
+                <p>Light roasts now hold the largest share in 2024 to 2026, though 2026 is a partial year.</p>
+            <p class="how">Each cell shows the share of that year's reviews with one roast level. Darker means a bigger share.</p>
         </div>
-        </div>
+    </div>
 
-     <div class="row">
+    <div class="card">
         <div id="chart7" class="chart"></div>
         <div class="note">
-            <p>This chart puts the whole project in one view. The brown dots show each country’s share of world coffee production in 2024, and the orange dots show its share of single-origin Coffee Review ratings. Brazil and Vietnam together grow nearly half of the world’s coffee (about 30% and 18%), but Brazil receives under 3% of the reviews and Vietnam almost none. Ethiopia shows the opposite pattern: it produces about 5% of the world’s coffee but accounts for roughly 23% of the reviews. Kenya, Panama, Costa Rica and El Salvador also appear far more often in the reviews than their harvest would suggest, and the United States and Panama have almost no production share at all. This supports the hypothesis: the countries that grow the most coffee are not the ones experts review most. One caution still applies. Coffee Review rates specialty coffees that roasters submit, so this shows which origins reach the specialty market, not which coffees are better.</p>
+            <h3>Origin moves ratings by only a few points</h3>
+                <p>Median ratings run from about 91 (Brazil and Mexico) to about 94 (Panama).</p>
+                <p>Brazil has one of the lowest medians.</p>
+            <p class="how">Each box covers the middle half of ratings and the line inside marks the median. Only origins with 100 or more reviews are shown.</p>
         </div>
-        </div>
+    </div>
 
-     <div id="chart8" class="chart"></div>
-     <div id="chart9" class="chart"></div>
-     <div id="chart10" class="chart"></div>
-     <div id="chart11" class="chart"></div>
+    <div class="card">
+        <div id="chart8" class="chart"></div>
+        <div class="note">
+            <h3>Big producers get few reviews</h3>
+                <p>Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews.</p>
+                <p>Ethiopia grows about 5% of the world's coffee but receives roughly 23% of the reviews.</p>
+            <p class="how">Brown dots show share of production and orange dots show share of reviews. A longer line means a bigger gap.</p>
+        </div>
+    </div>
+
+    <div class="card wide">
+        <div id="chart9" class="chart"></div>
+        <div class="note">
+            <h3>Higher production does not mean higher ratings</h3>
+                <p>Brazil grows 68 times more than Kenya but averages about 3 points lower.</p>
+                <p>Each bubble is a country, sized by tonnes produced.</p>
+            <p class="how">Across shows production on a log scale and up shows the average rating. Hover over a bubble for details.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div id="chart10" class="chart"></div>
+        <div class="note">
+            <h3>Big producers rank low on quality</h3>
+                <p>Six of the eight biggest producers rank in the bottom half for quality.</p>
+                <p>Vietnam and Uganda are not ranked because they have too few reviews.</p>
+            <p class="how">Each line joins a country's production rank to its quality rank, where 1 is the highest. Hover over a line to highlight a country.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div id="chart11" class="chart"></div>
+        <div class="note">
+            <h3>Most reviewed coffees are roasted in two places</h3>
+                <p>93% of reviews for these six origins were roasted in the United States or Taiwan.</p>
+                <p>The lines show where reviewed coffees were grown and roasted, not trade volumes.</p>
+            <p class="how">Line width shows the number of reviews. Hover over a line to highlight it.</p>
+        </div>
+    </div>
 
     <div class="page-footer">
       <p>Created by Shrrii Shivanie Naidu · FIT3179 Data Visualisation · Monash University · October 2026</p>
@@ -91,16 +140,16 @@
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
         <script>
-            vegaEmbed("#chart1", "Visualization/Choropleth.vg.JSON", { actions: false });
-            vegaEmbed("#chart2", "Visualization/Barchart.vg.JSON", { actions: false });
-            vegaEmbed("#chart3", "Visualization/Linechart.vg.JSON", { actions: false });
-            vegaEmbed("#chart4", "Visualization/Histogram.vg.JSON", { actions: false });
-            vegaEmbed("#chart5", "Visualization/Heatmap.vg.JSON", { actions: false });
-            vegaEmbed("#chart6", "Visualization/Boxplot.vg.JSON", { actions: false });
-            vegaEmbed("#chart7", "Visualization/Dumbbell.vg.JSON", { actions: false });
-            vegaEmbed("#chart8", "Visualization/Bubbleplot.vg.JSON", { actions: false });
-            vegaEmbed("#chart9", "Visualization/Slopechart.vg.JSON", { actions: false });
-            vegaEmbed("#chart10", "Visualization/ProportionalSymbolMap.vg.JSON", { actions: false });
+            vegaEmbed("#chart1", "Visualization/ProportionalSymbolMap.vg.JSON", { actions: false });
+            vegaEmbed("#chart2", "Visualization/Choropleth.vg.JSON", { actions: false });
+            vegaEmbed("#chart3", "Visualization/Barchart.vg.JSON", { actions: false });
+            vegaEmbed("#chart4", "Visualization/Linechart.vg.JSON", { actions: false });
+            vegaEmbed("#chart5", "Visualization/Histogram.vg.JSON", { actions: false });
+            vegaEmbed("#chart6", "Visualization/Heatmap.vg.JSON", { actions: false });
+            vegaEmbed("#chart7", "Visualization/Boxplot.vg.JSON", { actions: false });
+            vegaEmbed("#chart8", "Visualization/Dumbbell.vg.JSON", { actions: false });
+            vegaEmbed("#chart9", "Visualization/Bubbleplot.vg.JSON", { actions: false });
+            vegaEmbed("#chart10", "Visualization/Slopechart.vg.JSON", { actions: false });
             vegaEmbed("#chart11", "Visualization/Flowmap.vg.JSON", { actions: false });
         </script>
 </body>
