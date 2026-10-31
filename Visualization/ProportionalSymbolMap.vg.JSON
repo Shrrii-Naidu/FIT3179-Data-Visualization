@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Global Coffee Production by Country, 2024",
-    "subtitle": "Brazil and Vietnam alone harvest nearly half of the world's coffee (circle area = tonnes)",
+    "subtitle": "Brazil and Vietnam harvest nearly half of the world's coffee",
     "anchor": "middle",
     "fontSize": 16,
     "subtitleFontSize": 12
