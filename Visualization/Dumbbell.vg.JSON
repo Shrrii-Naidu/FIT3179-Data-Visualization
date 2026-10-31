@@ -36,7 +36,7 @@
             "order": "ascending"
           },
           "axis": {
-            "title": null
+            "title": "Country"
           }
         },
         "x": {
