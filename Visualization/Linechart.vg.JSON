@@ -4,49 +4,213 @@
   "height": 320,
   "background": "#ece0d1",
   "title": {
-    "text": "Uganda’s output is up about 80% since 2014, while Brazil’s is up only about 20%",
-    "subtitle": "Production of the six biggest producers, indexed to 2014 = 100"
+    "text": "Production Growth of the Six Largest Coffee Producers, 2014\u20132024",
+    "subtitle": "Indexed to 2014 = 100. Uganda is up about 80%, while Brazil is up about 20%",
+    "anchor": "middle"
   },
   "data": {
     "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/fao_production.csv",
-    "format": { "type": "csv", "parse": { "year": "number", "tonnes": "number", "m49": "number" } }
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "tonnes": "number",
+        "m49": "number"
+      }
+    }
   },
   "transform": [
-    { "calculate": "datum.year === 2024 ? datum.tonnes : 0", "as": "t2024" },
-    { "calculate": "datum.year === 2014 ? datum.tonnes : 0", "as": "t2014" },
-    { "joinaggregate": [
-        { "op": "max", "field": "t2024", "as": "prod2024" },
-        { "op": "max", "field": "t2014", "as": "base2014" }
-      ], "groupby": ["country"] },
-    { "window": [{ "op": "dense_rank", "as": "r" }],
-      "sort": [{ "field": "prod2024", "order": "descending" }] },
-    { "filter": "datum.r <= 6 && datum.base2014 > 0" },
-    { "calculate": "datum.tonnes / datum.base2014 * 100", "as": "index" }
+    {
+      "calculate": "datum.year === 2024 ? datum.tonnes : 0",
+      "as": "t2024"
+    },
+    {
+      "calculate": "datum.year === 2014 ? datum.tonnes : 0",
+      "as": "t2014"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "t2024",
+          "as": "prod2024"
+        },
+        {
+          "op": "max",
+          "field": "t2014",
+          "as": "base2014"
+        }
+      ],
+      "groupby": [
+        "country"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "r"
+        }
+      ],
+      "sort": [
+        {
+          "field": "prod2024",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.r <= 6 && datum.base2014 > 0"
+    },
+    {
+      "calculate": "datum.tonnes / datum.base2014 * 100",
+      "as": "index"
+    }
   ],
   "encoding": {
-    "x": { "field": "year", "type": "quantitative",
-           "axis": { "format": "d", "tickMinStep": 1, "title": null } },
-    "y": { "field": "index", "type": "quantitative",
-           "axis": { "title": "Production index (2014 = 100)" }  },
-    "color": { "field": "country", "type": "nominal",
-           "legend": { "title": null, "orient": "right", "labelFontSize": 12, "symbolStrokeWidth": 4 },
-           "scale": {
-             "domain": ["Brazil","Colombia","Ethiopia","Indonesia","Uganda","Vietnam"],
-             "range": ["#5a3a24","#E69F00","#0072B2","#56B4E9","#D55E00","#CC79A7"] } }
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "axis": {
+        "format": "d",
+        "tickMinStep": 1,
+        "title": null
+      }
+    },
+    "y": {
+      "field": "index",
+      "type": "quantitative",
+      "axis": {
+        "title": "Production index (2014 = 100)"
+      }
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "legend": {
+        "title": null,
+        "orient": "right",
+        "labelFontSize": 12,
+        "symbolStrokeWidth": 4
+      },
+      "scale": {
+        "domain": [
+          "Brazil",
+          "Colombia",
+          "Ethiopia",
+          "Indonesia",
+          "Uganda",
+          "Vietnam"
+        ],
+        "range": [
+          "#5a3a24",
+          "#E69F00",
+          "#0072B2",
+          "#56B4E9",
+          "#D55E00",
+          "#CC79A7"
+        ]
+      }
+    }
   },
   "layer": [
-    { "mark": { "type": "line", "strokeWidth": 2.5 } },
-    { "mark": { "type": "rule", "strokeDash": [4, 4], "color": "#6f4e37" },
-      "encoding": { "y": { "datum": 100 }, "x": { "value": 0 }, "x2": { "value": "width" },
-                    "color": { "value": "#6f4e37" } } }
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "y": {
+          "datum": 100
+        },
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "value": "width"
+        },
+        "color": {
+          "value": "#6f4e37"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: FAOSTAT (coffee production, 2014\u20132024)."
+          }
+        ]
+      },
+      "transform": [],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 372
+        },
+        "color": {
+          "value": "#6f4e37"
+        }
+      }
+    }
   ],
   "config": {
-    "font": "Montserrat",
-    "view": { "stroke": null },
-    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
-               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
-    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
-              "titleFont": "Montserrat", "titleColor": "#6f4e37",
-              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" }
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "axis": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "titleFont": "Roboto Flex",
+      "titleFontSize": 12,
+      "titleColor": "#6f4e37",
+      "domainColor": "#38220f",
+      "tickColor": "#38220f",
+      "gridColor": "#d8c8b4"
+    },
+    "legend": {
+      "labelFont": "Roboto Flex",
+      "titleFont": "Roboto Flex",
+      "labelColor": "#38220f",
+      "titleColor": "#6f4e37"
+    },
+    "text": {
+      "font": "Roboto Flex"
+    }
   }
 }
