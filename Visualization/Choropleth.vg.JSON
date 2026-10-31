@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Coffee Production per Person by Country, 2024",
-    "subtitle": "Production per person peaks in a few small producers which is led by Honduras, Laos and Nicaragua",
+    "subtitle": "Honduras, Laos and Nicaragua grow the most coffee per person",
     "fontSize": 16,
     "subtitleFontSize": 12
   },
@@ -12,7 +12,7 @@
     "left": 5,
     "right": 5,
     "top": 5,
-    "bottom": 125
+    "bottom": 10
   },
   "background": "transparent",
   "projection": {
