@@ -4,45 +4,183 @@
   "height": 350,
   "background": "#ece0d1",
   "title": {
-    "text": "8 in 10 reviewed coffees score 90 or higher",
-    "subtitle": "Distribution of 9,003 Coffee Review ratings, 1997-2026"
+    "text": "Distribution of Coffee Review Ratings, 1997\u20132026",
+    "subtitle": "About 8 in 10 reviewed coffees score 90 or higher",
+    "anchor": "middle"
   },
   "data": {
     "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
-    "format": { "type": "csv", "parse": { "rating": "number" } }
+    "format": {
+      "type": "csv",
+      "parse": {
+        "rating": "number"
+      }
+    }
   },
-  "transform": [{ "filter": "isValid(datum.rating)" }],
+  "transform": [
+    {
+      "filter": "isValid(datum.rating)"
+    }
+  ],
   "layer": [
     {
-      "mark": { "type": "bar", "color": "#b08968" },
+      "mark": {
+        "type": "bar",
+        "color": "#b08968"
+      },
       "encoding": {
-        "x": { "field": "rating", "bin": { "step": 1 }, "type": "quantitative",
-       "scale": { "domain": [0, 100] },
-       "axis": { "title": "Rating (out of 100)", "values": [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100] } },
-        "y": { "aggregate": "count", "type": "quantitative",
-               "axis": { "title": "Number of reviews" } }
+        "x": {
+          "field": "rating",
+          "bin": {
+            "step": 1
+          },
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": "Rating (out of 100)",
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "labelOverlap": false
+          }
+        },
+        "y": {
+          "aggregate": "count",
+          "type": "quantitative",
+          "axis": {
+            "title": "Number of reviews"
+          }
+        }
       }
     },
     {
-      "mark": { "type": "rule", "strokeDash": [4, 4], "color": "#6f4e37", "strokeWidth": 2 },
-      "encoding": { "x": { "datum": 90, "type": "quantitative" } }
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#6f4e37",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "datum": 90,
+          "type": "quantitative"
+        }
+      }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -6, "dy": -4, "font": "Montserrat", "fontSize": 13, "fontWeight": 300, "color": "#38220f", "lineBreak": "\n" },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "dy": -4,
+        "font": "Roboto Flex",
+        "fontSize": 13,
+        "fontWeight": 300,
+        "color": "#38220f",
+        "lineBreak": "\n"
+      },
       "encoding": {
-        "x": { "datum": 90, "type": "quantitative" },
-        "y": { "value": 20 },
-        "text": { "value": ["80% of ratings", "are 90 or above"] }
+        "x": {
+          "datum": 90,
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 20
+        },
+        "text": {
+          "value": [
+            "80% of ratings",
+            "are 90 or above"
+          ]
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: Coffee Review via Kaggle (9,003 ratings with a recorded score)."
+          }
+        ]
+      },
+      "transform": [],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 402
+        }
       }
     }
   ],
   "config": {
-    "font": "Montserrat",
-    "view": { "stroke": null },
-    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
-               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
-    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
-              "titleFont": "Montserrat", "titleColor": "#6f4e37",
-              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" }
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "axis": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "titleFont": "Roboto Flex",
+      "titleFontSize": 12,
+      "titleColor": "#6f4e37",
+      "domainColor": "#38220f",
+      "tickColor": "#38220f",
+      "gridColor": "#d8c8b4"
+    },
+    "text": {
+      "font": "Roboto Flex"
+    }
   }
 }
