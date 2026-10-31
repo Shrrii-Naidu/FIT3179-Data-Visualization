@@ -28,7 +28,7 @@ h2 {
   display: grid;
   grid-template-columns: minmax(0, 780px) 300px;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
   box-sizing: border-box;
   max-width: 1280px;
