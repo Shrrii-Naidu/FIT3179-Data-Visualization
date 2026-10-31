@@ -12,7 +12,7 @@
     "left": 5,
     "right": 5,
     "top": 5,
-    "bottom": 140
+    "bottom": 125
   },
   "background": "#ece0d1",
   "projection": {
@@ -297,7 +297,7 @@
       "data": {
         "values": [
           {
-            "t": "Source: FAOSTAT (coffee production, 2024). Natural Earth (map boundaries)."
+            "t": "Source: FAOSTAT (coffee production, 2024)."
           }
         ]
       },
@@ -346,34 +346,6 @@
         },
         "y": {
           "value": 440
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "t": "The Central African Republic is left out because its FAO figures look unreliable."
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "fontSize": 11,
-        "color": "#6f4e37"
-      },
-      "encoding": {
-        "text": {
-          "field": "t",
-          "type": "nominal"
-        },
-        "x": {
-          "value": 23
-        },
-        "y": {
-          "value": 456
         }
       }
     }
