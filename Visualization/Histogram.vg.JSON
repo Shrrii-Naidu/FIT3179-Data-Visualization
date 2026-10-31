@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 650,
   "height": 350,
-  "background": "#ece0d1",
+  "background": "transparent",
   "title": {
     "text": "Distribution of Coffee Review Ratings, 1997\u20132026",
     "subtitle": "About 8 in 10 reviewed coffees score 90 or higher",
