@@ -4,35 +4,190 @@
   "height": 380,
   "background": "#ece0d1",
   "title": {
-  "text": "Origin moves a coffee's rating by only a few points",
-  "subtitle": "Coffee Review ratings by origin (single-origin coffees, countries with 100+ reviews). Axis starts at 60."
-},
-  "data": {
-    "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
-    "format": { "type": "csv", "parse": { "rating": "number" } }
+    "text": "Coffee Review Ratings by Origin",
+    "subtitle": "Origin moves a coffee's rating by only a few points",
+    "anchor": "middle"
   },
-  "transform": [
-    { "filter": "datum.origin_type === 'single' && isValid(datum.rating) && isValid(datum.country)" },
-    { "joinaggregate": [{ "op": "count", "as": "n_reviews" }], "groupby": ["country"] },
-    { "filter": "datum.n_reviews >= 100" }
+  "layer": [
+    {
+      "data": {
+        "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/reviews_trimmed.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "rating": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.origin_type === 'single' && isValid(datum.rating) && isValid(datum.country)"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "count",
+              "as": "n_reviews"
+            }
+          ],
+          "groupby": [
+            "country"
+          ]
+        },
+        {
+          "filter": "datum.n_reviews >= 100"
+        }
+      ],
+      "mark": {
+        "type": "boxplot",
+        "extent": 1.5,
+        "size": 18,
+        "color": "#E69F00",
+        "opacity": 0.9,
+        "box": {
+          "fill": "#E69F00",
+          "stroke": "#9a5b00"
+        },
+        "median": {
+          "color": "#38220f",
+          "size": 18
+        },
+        "rule": {
+          "color": "#9a5b00"
+        },
+        "ticks": {
+          "color": "#9a5b00"
+        },
+        "outliers": {
+          "color": "#E69F00",
+          "stroke": "#9a5b00",
+          "opacity": 0.7
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "country",
+          "type": "nominal",
+          "sort": [
+            "Panama",
+            "United States of America",
+            "Colombia",
+            "Costa Rica",
+            "Ethiopia",
+            "Kenya",
+            "El Salvador",
+            "Guatemala",
+            "Honduras",
+            "Indonesia",
+            "Nicaragua",
+            "Peru",
+            "Rwanda",
+            "Brazil",
+            "Mexico"
+          ],
+          "axis": {
+            "title": null
+          }
+        },
+        "x": {
+          "field": "rating",
+          "type": "quantitative",
+          "title": "Rating (out of 100)",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              0,
+              5,
+              10,
+              15,
+              20,
+              25,
+              30,
+              35,
+              40,
+              45,
+              50,
+              55,
+              60,
+              65,
+              70,
+              75,
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "title": "Rating (out of 100)",
+            "labelOverlap": false
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: Coffee Review via Kaggle. Single-origin coffees from countries with 100+ reviews."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 432
+        }
+      }
+    }
   ],
-  "mark": { "type": "boxplot", "extent": 1.5, "size": 18, "color": "#b08968",
-            "median": { "color": "#38220f" } },
-  "encoding": {
-      "y": { "field": "country", "type": "nominal",
-           "sort": ["Panama", "United States of America", "Colombia", "Costa Rica", "Ethiopia", "Kenya", "El Salvador", "Guatemala", "Honduras", "Indonesia", "Nicaragua", "Peru", "Rwanda", "Brazil", "Mexico"],
-           "axis": { "title": null } },
-    "x": { "field": "rating", "type": "quantitative",
-           "scale": { "zero": false },
-           "axis": { "title": "Rating (out of 100)" } }
-  },
   "config": {
-    "font": "Montserrat",
-    "view": { "stroke": null },
-    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
-               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
-    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
-              "titleFont": "Montserrat", "titleColor": "#6f4e37",
-              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" }
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "axis": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "titleFont": "Roboto Flex",
+      "titleFontSize": 12,
+      "titleColor": "#6f4e37",
+      "domainColor": "#38220f",
+      "tickColor": "#38220f",
+      "gridColor": "#d8c8b4",
+      "labelLimit": 220
+    },
+    "text": {
+      "font": "Roboto Flex"
+    }
   }
 }
