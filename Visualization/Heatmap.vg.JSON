@@ -58,7 +58,7 @@
           "field": "review_year",
           "type": "ordinal",
           "axis": {
-            "title": null,
+            "title": "Year",
             "labelAngle": 0,
             "labelFontSize": 10
           }
@@ -75,7 +75,7 @@
             "Very Dark"
           ],
           "axis": {
-            "title": null
+            "title": "Roast level"
           }
         },
         "color": {
@@ -96,7 +96,7 @@
             "orient": "none",
             "direction": "horizontal",
             "legendX": 225,
-            "legendY": 328,
+            "legendY": 352,
             "gradientLength": 300,
             "gradientThickness": 12,
             "titleOrient": "top",
@@ -149,7 +149,7 @@
           "value": 0
         },
         "y": {
-          "value": 392
+          "value": 416
         }
       }
     },
@@ -177,7 +177,7 @@
           "value": 0
         },
         "y": {
-          "value": 408
+          "value": 432
         }
       }
     }
@@ -185,7 +185,8 @@
   "config": {
     "font": "Roboto Flex",
     "view": {
-      "stroke": null
+      "stroke": null,
+      "fill": "#ece0d1"
     },
     "title": {
       "font": "Roboto Flex",
