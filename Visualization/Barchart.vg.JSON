@@ -79,7 +79,10 @@
           "field": "country",
           "type": "nominal",
           "title": null,
-          "sort": "-x"
+          "sort": "-x",
+          "axis": {
+            "title": "Country"
+          }
         },
         "x": {
           "field": "tonnes",
