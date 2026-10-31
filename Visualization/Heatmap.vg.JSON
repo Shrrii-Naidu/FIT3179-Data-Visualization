@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 750,
   "height": 300,
-  "background": "#ece0d1",
+  "background": "transparent",
   "title": {
     "text": "Roast Levels of Reviewed Coffees by Year, 2001\u20132026",
     "subtitle": "Medium-Light roasts led from 2013 to 2023, and Light roasts are now catching up",
