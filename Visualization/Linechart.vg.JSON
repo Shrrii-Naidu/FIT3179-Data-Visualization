@@ -117,7 +117,38 @@
     {
       "mark": {
         "type": "line",
-        "strokeWidth": 2.5
+        "strokeWidth": 2.5,
+        "point": {
+          "filled": true,
+          "size": 28
+        }
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "tonnes",
+            "type": "quantitative",
+            "title": "Tonnes produced",
+            "format": ","
+          },
+          {
+            "field": "index",
+            "type": "quantitative",
+            "title": "Index (2014 = 100)",
+            "format": ".0f"
+          }
+        ]
       }
     },
     {
