@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Global Coffee Production by Country, 2024",
-    "subtitle": "Brazil and Vietnam alone harvest nearly half of the world’s coffee",
+    "text": "Brazil and Vietnam alone harvest nearly half of the world's coffee",
+    "subtitle": "Coffee produced by country, 2024 (circle area = tonnes)",
     "anchor": "middle",
     "fontSize": 18,
     "subtitleFontSize": 13
   },
-  "width": 640,
-  "height": 336,
+  "width": 800,
+  "height": 420,
   "background": "#ece0d1",
   "projection": {
     "type": "equalEarth"
@@ -312,7 +312,7 @@
       "data": {
         "values": [
           {
-            "t": "Source: FAOSTAT (coffee production, 2024). Natural Earth (map boundaries)."
+            "t": "Source: FAOSTAT (coffee production, 2024)."
           }
         ]
       },
@@ -340,7 +340,7 @@
       "data": {
         "values": [
           {
-            "t": "Nicaragua is shown with its 2023 value as FAO has no 2024 figure. The Central African Republic is left out because its FAO figures look unreliable."
+            "t": "Nicaragua is shown with its 2023 value as FAO has no 2024 figure."
           }
         ]
       },
