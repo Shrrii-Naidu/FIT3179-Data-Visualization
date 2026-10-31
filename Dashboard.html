@@ -1,159 +1,150 @@
-body {
-  margin: 0;
-  padding: 0 24px 40px;
-  background-color: #ece0d1;
-  color: #38220f;
-  font-family: "Roboto Flex", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-h1 {
-  font-family: "Alfa Slab One", serif;
-  font-weight: 400;
-  font-size: 3rem;
-  text-align: center;
-  margin: 32px 0 8px;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Flex:wght@400;500;700&display=swap" rel="stylesheet">
 
-h2 {
-  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-size: 1.8rem;
-  font-style: normal;
-  text-align: center;
-  margin: 0 0 32px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Coffee Gap</h1>
 
-.card {
-  display: grid;
-  grid-template-columns: minmax(0, 780px) 300px;
-  justify-content: center;
-  gap: 24px;
-  align-items: center;
-  box-sizing: border-box;
-  max-width: 1280px;
-  margin: 0 auto 28px;
-  padding: 24px;
-  border: 1px solid #d2c0a8;
-  border-radius: 12px;
-  background-color: #f6f0e4;
-}
+    <h2>Comparing the World's Coffee Harvest with Expert Ratings</h2>
+    <div class="card">
+        <div id="chart1" class="chart"></div>
+        <div class="note">
+            <h3>Almost half of the World's Coffee comes from two Countries</h3>
+                <p>Brazil and Vietnam alone grow about 49% of the world's coffee.</p>
+                <p>Most other producers are far smaller.</p>
+            <p class="how">Circle area shows tonnes produced in 2024. Hover over a circle for the figure.</p>
+        </div>
+    </div>
 
-.card.wide {
-  grid-template-columns: minmax(0, 1fr);
-}
+    <div class="card">
+        <div id="chart2" class="chart"></div>
+        <div class="note">
+            <h3>Small countries grow the most coffee per person</h3>
+                <p>Honduras, Laos and Nicaragua produce the most coffee per person.</p>
+                <p>Countries that grow no coffee are shaded beige, not left blank.</p>
+            <p class="how">Darker green means more kilograms of coffee per person in 2024. Hover over a country for its value.</p>
+        </div>
+    </div>
 
-.chart {
-  display: flex;
-  justify-content: center;
-  min-width: 0;
-  overflow-x: auto;
-}
+    <div class="card">
+        <div id="chart3" class="chart"></div>
+        <div class="note">
+            <h3>Brazil outgrows its closest rivals combined</h3>
+                <p>Brazil harvested about 3.4 million tonnes in 2024 which is more than Vietnam and Colombia combined.</p>
+                <p>Output drops below 0.8 million tonnes from Indonesia onward.</p>
+            <p class="how">Bars are sorted by tonnes produced. Hover over a bar for the figure.</p>
+        </div>
+    </div>
 
-.vega-embed {
-  display: block !important;
-  flex: 0 0 auto;
-  width: max-content;
-  margin: 0 auto;
-}
+    <div class="card">
+        <div id="chart4" class="chart"></div>
+        <div class="note">
+            <h3>The fastest growers are not the biggest producers</h3>
+                <p>Uganda is up about 80% since 2014, while Brazil is up about 20%.</p>
+                <p>Colombia is the least stable, dipping to about 77 in 2021.</p>
+            <p class="how">Each line is indexed so that 2014 equals 100. So a value of 150 means 50% more than in 2014.</p>
+        </div>
+    </div>
 
-.note {
-  color: #38220f;
-  font-size: 16px;
-  line-height: 1.5;
-}
+    <div class="card">
+        <div id="chart5" class="chart"></div>
+        <div class="note">
+            <h3>Most coffees score 90 points or higher</h3>
+                <p>About 80% of the 9,003 scored coffees receive 90 points or more.</p>
+                <p>The most common score is 93.</p>
+            <p class="how">Each bar counts the reviews that received one score out of 100.</p>
+        </div>
+    </div>
 
-.note h3 {
-  margin: 0 0 10px 0;
-  font-size: 22px;
-  line-height: 1.25;
-  color: #6f4e37;
-}
+    <div class="card">
+        <div id="chart6" class="chart"></div>
+        <div class="note">
+            <h3>Reviewed coffees are getting lighter in roast</h3>
+                <p>Medium-Light roasts led from 2013 to 2023.</p>
+                <p>Light roasts now hold the largest share in 2024 to 2026, though 2026 is a partial year.</p>
+            <p class="how">Each cell shows the share of that year's reviews with one roast level. Darker means a bigger share.</p>
+        </div>
+    </div>
 
-.note p {
-  margin: 0 0 10px 0;
-}
+    <div class="card">
+        <div id="chart7" class="chart"></div>
+        <div class="note">
+            <h3>Origin moves ratings by only a few points</h3>
+                <p>Median ratings run from about 91 (Brazil and Mexico) to about 94 (Panama).</p>
+                <p>Brazil has one of the lowest medians.</p>
+            <p class="how">Each box covers the middle half of ratings and the line inside marks the median. Only origins with 100 or more reviews are shown.</p>
+        </div>
+    </div>
 
-.note .how {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #d2c0a8;
-  font-size: 14px;
-  color: #6b5f55;
-}
+    <div class="card">
+        <div id="chart8" class="chart"></div>
+        <div class="note">
+            <h3>Big producers get few reviews</h3>
+                <p>Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews.</p>
+                <p>Ethiopia grows about 5% of the world's coffee but receives roughly 23% of the reviews.</p>
+            <p class="how">Brown dots show share of production and orange dots show share of reviews. A longer line means a bigger gap.</p>
+        </div>
+    </div>
 
-.card.wide .note {
-  max-width: 760px;
-  margin: 0 auto;
-}
+    <div class="card wide">
+        <div id="chart9" class="chart"></div>
+    </div>
 
-.page-footer {
-  max-width: 1280px;
-  margin: 56px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #c9b9a6;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #6b5f55;
-}
+    <div class="card">
+        <div id="chart10" class="chart"></div>
+        <div class="note">
+            <h3>Big producers rank low on quality</h3>
+                <p>Six of the eight biggest producers rank in the bottom half for quality.</p>
+                <p>Vietnam and Uganda are not ranked because they have too few reviews.</p>
+            <p class="how">Each line joins a country's production rank to its quality rank, where 1 is the highest. Hover over a line to highlight a country.</p>
+        </div>
+    </div>
 
-.page-footer h4 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 18px 0 6px;
-  color: #6f4e37;
-}
+    <div class="card">
+        <div id="chart11" class="chart"></div>
+        <div class="note">
+            <h3>Most reviewed coffees are roasted in two places</h3>
+                <p>93% of reviews for these six origins were roasted in the United States or Taiwan.</p>
+                <p>The lines show where reviewed coffees were grown and roasted, not trade volumes.</p>
+            <p class="how">Line width shows the number of reviews. Hover over a line to highlight it.</p>
+        </div>
+    </div>
 
-.page-footer a {
-  color: #6f4e37;
-}
+    <div class="page-footer">
+      <p>Created by Shrrii Shivanie Naidu · FIT3179 Data Visualisation · Monash University · October 2026</p>
 
-@media (max-width: 1000px) {
-  .card {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
+      <h4>Data sources</h4>
+          <p>Food and Agriculture Organization of the United Nations. (n.d.). <em>Crops and livestock products</em> [Data set]. FAOSTAT. <a href="https://www.fao.org/faostat/en/#data/QCL">https://www.fao.org/faostat/en/#data/QCL</a></p>
+          <p>Vagan, K. (2026). <em>Coffee Review February 1997 to March 2026</em> [Data set]. Kaggle. <a href="https://www.kaggle.com/datasets/kevinvagan/coffee-review-february-1997-to-march-2026">https://www.kaggle.com/datasets/kevinvagan/coffee-review-february-1997-to-march-2026</a></p>
 
-.card.wide .note {
-  max-width: none;
-  margin: 0;
-  padding-top: 18px;
-  border-top: 1px solid #d2c0a8;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr 1fr;
-  column-gap: 32px;
-  align-items: start;
-}
+      <h4>Generative AI</h4>
+          <p>Claude was used to help debug code, improve the page layout, provide coding design guidance and to support data cleaning. The author chose the dataset, storyline and reviewed every chart. </p>
+    </div>
 
-.card.wide .note h3 {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  margin: 0;
-}
-
-.card.wide .note p {
-  grid-column: 2;
-  margin: 0 0 8px 0;
-}
-
-.card.wide .note p.how {
-  grid-column: 3;
-  grid-row: 1 / 3;
-  margin: 0;
-  padding: 0 0 0 24px;
-  border-top: none;
-  border-left: 1px solid #d2c0a8;
-}
-
-@media (max-width: 1000px) {
-  .card.wide .note {
-    display: block;
-  }
-  .card.wide .note p.how {
-    margin-top: 14px;
-    padding: 12px 0 0 0;
-    border-left: none;
-    border-top: 1px solid #d2c0a8;
-  }
-}
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+        <script>
+            vegaEmbed("#chart1", "Visualization/ProportionalSymbolMap.vg.JSON", { actions: false });
+            vegaEmbed("#chart2", "Visualization/Choropleth.vg.JSON", { actions: false });
+            vegaEmbed("#chart3", "Visualization/Barchart.vg.JSON", { actions: false });
+            vegaEmbed("#chart4", "Visualization/Linechart.vg.JSON", { actions: false });
+            vegaEmbed("#chart5", "Visualization/Histogram.vg.JSON", { actions: false });
+            vegaEmbed("#chart6", "Visualization/Heatmap.vg.JSON", { actions: false });
+            vegaEmbed("#chart7", "Visualization/Boxplot.vg.JSON", { actions: false });
+            vegaEmbed("#chart8", "Visualization/Dumbbell.vg.JSON", { actions: false });
+            vegaEmbed("#chart9", "Visualization/Bubbleplot.vg.JSON", { actions: false });
+            vegaEmbed("#chart10", "Visualization/Slopechart.vg.JSON", { actions: false });
+            vegaEmbed("#chart11", "Visualization/Flowmap.vg.JSON", { actions: false });
+        </script>
+</body>
+</html>
