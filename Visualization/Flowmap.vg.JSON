@@ -124,7 +124,7 @@
             ]
           },
           "legend": {
-            "title": "Reviews",
+            "title": "Number of reviews",
             "values": [
               50,
               200,
@@ -157,7 +157,7 @@
           {
             "field": "reviews",
             "type": "quantitative",
-            "title": "Reviews"
+            "title": "Number of reviews"
           }
         ]
       }
@@ -201,7 +201,7 @@
         "type": "circle",
         "color": "#1f5f6b",
         "size": 60,
-        "stroke": "#ece0d1",
+        "stroke": "#f6f0e4",
         "strokeWidth": 1
       },
       "encoding": {
@@ -535,7 +535,7 @@
       "mark": {
         "type": "circle",
         "color": "#1f5f6b",
-        "stroke": "#ece0d1",
+        "stroke": "#f6f0e4",
         "strokeWidth": 1,
         "opacity": 1,
         "size": 60
