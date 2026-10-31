@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 661,
-  "height": 300,
+  "height": 240,
   "background": "transparent",
   "title": {
     "text": "Roast Levels of Reviewed Coffees by Year, 2001\u20132026",
@@ -96,7 +96,7 @@
             "orient": "none",
             "direction": "horizontal",
             "legendX": 225,
-            "legendY": 352,
+            "legendY": 292,
             "gradientLength": 300,
             "gradientThickness": 12,
             "titleOrient": "top",
@@ -149,7 +149,7 @@
           "value": 0
         },
         "y": {
-          "value": 416
+          "value": 356
         }
       }
     },
@@ -177,7 +177,7 @@
           "value": 0
         },
         "y": {
-          "value": 432
+          "value": 372
         }
       }
     }
