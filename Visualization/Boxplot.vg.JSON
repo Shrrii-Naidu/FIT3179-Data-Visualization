@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 650,
+  "width": 613,
   "height": 380,
   "background": "transparent",
   "title": {
