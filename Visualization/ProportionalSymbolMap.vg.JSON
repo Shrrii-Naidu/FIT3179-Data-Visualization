@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Brazil and Vietnam alone harvest nearly half of the world's coffee",
-    "subtitle": "Coffee produced by country, 2024 (circle area = tonnes)",
+    "text": "Global Coffee Production by Country, 2024",
+    "subtitle": "Brazil and Vietnam alone harvest nearly half of the world's coffee (circle area = tonnes)",
     "anchor": "middle",
-    "fontSize": 18,
-    "subtitleFontSize": 13
+    "fontSize": 16,
+    "subtitleFontSize": 12
   },
   "width": 640,
   "height": 336,
@@ -332,7 +332,7 @@
           "value": 0
         },
         "y": {
-          "value": 436
+          "value": 352
         }
       }
     },
@@ -360,7 +360,7 @@
           "value": 0
         },
         "y": {
-          "value": 452
+          "value": 368
         }
       }
     }
@@ -372,11 +372,11 @@
     },
     "title": {
       "font": "Roboto Flex",
-      "fontSize": 18,
+      "fontSize": 16,
       "fontWeight": 500,
       "color": "#38220f",
       "subtitleFont": "Roboto Flex",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 12,
       "subtitleFontWeight": 400,
       "subtitleColor": "#6f4e37"
     },
