@@ -634,6 +634,132 @@
       "data": {
         "values": [
           {
+            "d": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "x": {
+          "value": 662
+        },
+        "y": {
+          "value": 150
+        },
+        "text": {
+          "value": "Place names"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "d": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "square",
+        "size": 70,
+        "color": "#1f5f6b"
+      },
+      "encoding": {
+        "x": {
+          "value": 667
+        },
+        "y": {
+          "value": 172
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "d": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "color": "#38220f"
+      },
+      "encoding": {
+        "x": {
+          "value": 678
+        },
+        "y": {
+          "value": 172
+        },
+        "text": {
+          "value": "Roaster location"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "d": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "square",
+        "size": 70,
+        "color": "#38220f"
+      },
+      "encoding": {
+        "x": {
+          "value": 667
+        },
+        "y": {
+          "value": 192
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "d": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "color": "#38220f"
+      },
+      "encoding": {
+        "x": {
+          "value": 678
+        },
+        "y": {
+          "value": 192
+        },
+        "text": {
+          "value": "Origin country"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
             "t": "Source: Coffee Review via Kaggle (single-origin reviews)."
           }
         ]
