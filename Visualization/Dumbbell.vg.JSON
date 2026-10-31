@@ -4,53 +4,197 @@
   "height": 380,
   "background": "#ece0d1",
   "title": {
-  "text": "Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews",
-  "subtitle": "Share of world production (FAO, 2024) vs share of single-origin reviews (Coffee Review), top 12 countries"
-},
+    "text": "Share of World Production and Share of Reviews by Country",
+    "subtitle": "Brazil and Vietnam grow nearly half the world's coffee but get under 3% of the reviews",
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://shrrii-naidu.github.io/FIT3179-Data-Visualization/Data/gap.csv",
-    "format": { "type": "csv", "parse": { "production": "number", "reviews": "number", "gap": "number" } }
+    "format": {
+      "type": "csv",
+      "parse": {
+        "production": "number",
+        "reviews": "number",
+        "gap": "number"
+      }
+    }
   },
   "layer": [
     {
-      "mark": { "type": "rule", "strokeWidth": 3, "color": "#b08968" },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#a89c8c"
+      },
       "encoding": {
-        "y": { "field": "country", "type": "nominal",
-               "sort": { "field": "gap", "op": "max", "order": "ascending" },
-               "axis": { "title": null } },
-        "x": { "field": "production", "type": "quantitative",
-               "axis": { "title": "Share of total", "format": "%" } },
-        "x2": { "field": "reviews" }
+        "y": {
+          "field": "country",
+          "type": "nominal",
+          "sort": {
+            "field": "gap",
+            "op": "max",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null
+          }
+        },
+        "x": {
+          "field": "production",
+          "type": "quantitative",
+          "axis": {
+            "title": "Share of total",
+            "format": "%"
+          }
+        },
+        "x2": {
+          "field": "reviews"
+        }
       }
     },
     {
-      "transform": [{ "fold": ["production", "reviews"], "as": ["measure", "share"] }],
-      "mark": { "type": "point", "filled": true, "size": 160, "opacity": 1 },
+      "transform": [
+        {
+          "fold": [
+            "production",
+            "reviews"
+          ],
+          "as": [
+            "measure",
+            "share"
+          ]
+        },
+        {
+          "calculate": "datum.measure === 'production' ? 'Share of world production' : 'Share of reviews'",
+          "as": "measure_label"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 160,
+        "opacity": 1
+      },
       "encoding": {
-        "y": { "field": "country", "type": "nominal",
-               "sort": { "field": "gap", "op": "max", "order": "ascending" },
-               "axis": { "title": null } },
-        "x": { "field": "share", "type": "quantitative", "axis": { "format": "%" } },
-        "color": { "field": "measure", "type": "nominal",
-                   "scale": { "domain": ["production", "reviews"], "range": ["#6f4e37", "#e08a2e"] },
-                   "legend": { "title": null, "orient": "top",
-                               "labelExpr": "datum.label === 'production' ? 'Share of world production' : 'Share of reviews'" } },
+        "y": {
+          "field": "country",
+          "type": "nominal",
+          "sort": {
+            "field": "gap",
+            "op": "max",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null
+          }
+        },
+        "x": {
+          "field": "share",
+          "type": "quantitative",
+          "axis": {
+            "format": "%"
+          }
+        },
+        "color": {
+          "field": "measure",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "production",
+              "reviews"
+            ],
+            "range": [
+              "#6f4e37",
+              "#E69F00"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "top",
+            "labelExpr": "datum.label === 'production' ? 'Share of world production' : 'Share of reviews'"
+          }
+        },
         "tooltip": [
-          { "field": "country", "title": "Country" },
-          { "field": "measure", "title": "Measure" },
-          { "field": "share", "title": "Share", "format": ".1%" }
+          {
+            "field": "country",
+            "title": "Country"
+          },
+          {
+            "field": "measure_label",
+            "title": "Measure"
+          },
+          {
+            "field": "share",
+            "title": "Share",
+            "format": ".1%"
+          }
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "Source: FAOSTAT (coffee production, 2024) and Coffee Review via Kaggle (single-origin reviews). Top 12 countries."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 436
+        }
       }
     }
   ],
   "config": {
-    "font": "Montserrat",
-    "view": { "stroke": null },
-    "title": { "font": "Montserrat", "fontSize": 16, "color": "#38220f",
-               "subtitleFont": "Montserrat", "subtitleColor": "#6f4e37" },
-    "axis": { "labelFont": "Montserrat", "labelColor": "#38220f",
-              "titleFont": "Montserrat", "titleColor": "#6f4e37",
-              "domainColor": "#38220f", "tickColor": "#38220f", "gridColor": "#d8c8b4" },
-    "legend": { "labelFont": "Montserrat", "labelColor": "#38220f" }
+    "font": "Roboto Flex",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Roboto Flex",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "color": "#38220f",
+      "subtitleFont": "Roboto Flex",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": 400,
+      "subtitleColor": "#6f4e37"
+    },
+    "axis": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "titleFont": "Roboto Flex",
+      "titleFontSize": 12,
+      "titleColor": "#6f4e37",
+      "domainColor": "#38220f",
+      "tickColor": "#38220f",
+      "gridColor": "#d8c8b4",
+      "labelLimit": 220
+    },
+    "legend": {
+      "labelFont": "Roboto Flex",
+      "labelFontSize": 11,
+      "labelColor": "#38220f",
+      "labelLimit": 300
+    },
+    "text": {
+      "font": "Roboto Flex"
+    }
   }
 }
