@@ -86,7 +86,7 @@
             "Mexico"
           ],
           "axis": {
-            "title": null
+            "title": "Country of origin"
           }
         },
         "x": {
