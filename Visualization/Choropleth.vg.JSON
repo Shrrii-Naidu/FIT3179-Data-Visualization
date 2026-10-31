@@ -3,8 +3,8 @@
   "title": {
     "text": "Coffee Production per Person by Country, 2024",
     "subtitle": "Production per person peaks in a few small producers which is led by Honduras, Laos and Nicaragua",
-    "fontSize": 18,
-    "subtitleFontSize": 13
+    "fontSize": 16,
+    "subtitleFontSize": 12
   },
   "width": 640,
   "height": 336,
@@ -12,7 +12,7 @@
     "left": 5,
     "right": 5,
     "top": 5,
-    "bottom": 135
+    "bottom": 140
   },
   "background": "#ece0d1",
   "projection": {
@@ -153,10 +153,10 @@
       },
       "encoding": {
         "x": {
-          "value": 55
+          "value": 23
         },
         "y": {
-          "value": 432
+          "value": 352
         },
         "text": {
           "field": "t2",
@@ -201,11 +201,11 @@
       },
       "transform": [
         {
-          "calculate": "55 + datum.i * 116",
+          "calculate": "23 + datum.i * 100",
           "as": "x0"
         },
         {
-          "calculate": "datum.x0 + 110",
+          "calculate": "datum.x0 + 94",
           "as": "x1"
         }
       ],
@@ -224,10 +224,10 @@
           "field": "x1"
         },
         "y": {
-          "value": 452
+          "value": 372
         },
         "y2": {
-          "value": 472
+          "value": 390
         },
         "fill": {
           "field": "c",
@@ -268,7 +268,7 @@
       },
       "transform": [
         {
-          "calculate": "55 + datum.i * 116 + 55",
+          "calculate": "23 + datum.i * 100 + 47",
           "as": "xm"
         }
       ],
@@ -285,7 +285,7 @@
           "scale": null
         },
         "y": {
-          "value": 478
+          "value": 396
         },
         "text": {
           "field": "label",
@@ -314,10 +314,10 @@
           "type": "nominal"
         },
         "x": {
-          "value": 55
+          "value": 23
         },
         "y": {
-          "value": 512
+          "value": 424
         }
       }
     },
@@ -325,7 +325,7 @@
       "data": {
         "values": [
           {
-            "t": "Nicaragua is shown with its 2023 value as FAO has no 2024 figure. The Central African Republic is left out because its FAO figures look unreliable."
+            "t": "Nicaragua is shown with its 2023 value as FAO has no 2024 figure."
           }
         ]
       },
@@ -342,10 +342,38 @@
           "type": "nominal"
         },
         "x": {
-          "value": 55
+          "value": 23
         },
         "y": {
-          "value": 528
+          "value": 440
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": "The Central African Republic is left out because its FAO figures look unreliable."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "color": "#6f4e37"
+      },
+      "encoding": {
+        "text": {
+          "field": "t",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 23
+        },
+        "y": {
+          "value": 456
         }
       }
     }
@@ -357,11 +385,11 @@
     },
     "title": {
       "font": "Roboto Flex",
-      "fontSize": 18,
+      "fontSize": 16,
       "fontWeight": 500,
       "color": "#38220f",
       "subtitleFont": "Roboto Flex",
-      "subtitleFontSize": 13,
+      "subtitleFontSize": 12,
       "subtitleFontWeight": 400,
       "subtitleColor": "#6f4e37"
     },
