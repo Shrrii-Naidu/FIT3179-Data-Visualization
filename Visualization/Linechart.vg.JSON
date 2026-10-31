@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 560,
   "height": 320,
-  "background": "#ece0d1",
+  "background": "transparent",
   "title": {
     "text": "Production Growth of the Six Largest Coffee Producers, 2014\u20132024",
     "subtitle": "Indexed to 2014 = 100. Uganda is up about 80%, while Brazil is up about 20%",
