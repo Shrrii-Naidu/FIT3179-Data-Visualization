@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Brazil grows more coffee than Vietnam and Colombia combined",
-    "subtitle": "Top 10 coffee-producing countries, 2024",
+    "text": "Top Ten Coffee Producers, 2024",
+    "subtitle": "Brazil grows more coffee than Vietnam and Colombia combined",
     "anchor": "start"
   },
   "width": 560,
